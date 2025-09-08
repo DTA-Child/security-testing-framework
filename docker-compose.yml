@@ -1,42 +1,20 @@
-services:
-  zap:
-    image: ghcr.io/zaproxy/zaproxy:stable
-    command: zap.sh -daemon -host 0.0.0.0 -port 8080 -config api.disablekey=true
-    ports:
-      - "8080:8080"
-    networks:
-      - security-net
-    healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:8080/JSON/core/view/version/"]
-      interval: 30s
-      timeout: 10s
-      retries: 5
-      start_period: 30s
+version: '3.8'
 
-  app:
+services:
+  scanner:
     build: .
     ports:
       - "8000:8000"
     environment:
-      - ZAP_HOST=zap
-      - ZAP_PORT=8080
       - API_HOST=0.0.0.0
       - API_PORT=8000
-      - PYTHONPATH=/app
-    depends_on:
-      zap:
-        condition: service_healthy
+      - LOG_LEVEL=INFO
     volumes:
       - ./reports:/app/reports
-      - ./logs:/app/logs
-    networks:
-      - security-net
     restart: unless-stopped
-
-networks:
-  security-net:
-    driver: bridge
-
-volumes:
-  reports:
-  logs:
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/api/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s

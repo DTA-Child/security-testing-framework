@@ -1,22 +1,29 @@
+"""Application configuration settings"""
+
 from pydantic_settings import BaseSettings
-from typing import Optional, List, ClassVar
-import os
+from typing import List, ClassVar
 
 class Settings(BaseSettings):
+    """Application configuration"""
+    
+    # Basic Settings
     APP_NAME: str = "Security Testing Framework"
+    VERSION: str = "1.0.0"
     API_HOST: str = "0.0.0.0"
     API_PORT: int = 8000
-    ZAP_HOST: str = "localhost"
-    ZAP_PORT: int = 8080
-    REPORT_OUTPUT_DIR: str = "reports"
     
-    # Additional configuration
+    # Scanner Settings
+    MAX_CONCURRENT_SCANS: int = 3
+    SCAN_TIMEOUT: int = 300  # 5 minutes
+    
+    # Logging
     DEBUG: bool = False
     LOG_LEVEL: str = "INFO"
-    MAX_CONCURRENT_SCANS: int = 5
-    SCAN_TIMEOUT: int = 3600  # 1 hour
     
-    # OWASP Top 10 2024 Categories - LATEST VERSION
+    # Directories
+    REPORTS_DIR: str = "reports"
+    
+    # OWASP Top 10 2024
     OWASP_CATEGORIES: ClassVar[List[str]] = [
         "A01:2024-Broken Access Control",
         "A02:2024-Cryptographic Failures", 
