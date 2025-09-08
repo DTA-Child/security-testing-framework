@@ -1,5 +1,5 @@
-from pydantic import BaseSettings
-from typing import Optional
+from pydantic_settings import BaseSettings
+from typing import Optional, List, ClassVar
 import os
 
 class Settings(BaseSettings):
@@ -16,8 +16,8 @@ class Settings(BaseSettings):
     MAX_CONCURRENT_SCANS: int = 5
     SCAN_TIMEOUT: int = 3600  # 1 hour
     
-    # OWASP Categories - EXACT NAMES
-    OWASP_CATEGORIES = [
+    # OWASP Categories - EXACT NAMES (ClassVar to avoid being treated as field)
+    OWASP_CATEGORIES: ClassVar[List[str]] = [
         "A01:2021-Broken Access Control",
         "A02:2021-Cryptographic Failures", 
         "A03:2021-Injection",
@@ -30,9 +30,10 @@ class Settings(BaseSettings):
         "A10:2021-Server-Side Request Forgery"
     ]
     
-    class Config:
-        env_file = ".env"
-        case_sensitive = True
+    model_config = {
+        "env_file": ".env",
+        "case_sensitive": True
+    }
 
 # Global settings instance
 settings = Settings()
