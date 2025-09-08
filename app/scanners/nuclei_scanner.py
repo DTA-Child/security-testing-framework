@@ -55,9 +55,15 @@ class NucleiScanner(BaseScanner):
                 try:
                     stdout, stderr = await asyncio.wait_for(process.communicate(), timeout=30)
                 except asyncio.TimeoutError:
-                    logger.warning("Nuclei scan timed out, using mock data")
+                    logger.warning("Nuclei scan timed out")
                     process.kill()
-                    return self._get_mock_nuclei_data(target_url)
+                    return {
+                        'scanner': 'nuclei',
+                        'target_url': target_url,
+                        'findings': [],
+                        'timeout': True,
+                        'scan_summary': {'total_findings': 0}
+                    }
                 
                 # Parse results from file
                 findings = []
@@ -73,10 +79,15 @@ class NucleiScanner(BaseScanner):
                     finally:
                         os.unlink(temp_filename)
                 
-                # If no findings from real scan, add mock data for demo
+                # Return real results even if empty
                 if len(findings) == 0:
-                    logger.info("No real vulnerabilities found, adding demo findings")
-                    return self._get_mock_nuclei_data(target_url)
+                    logger.info(f"Nuclei scan completed with no vulnerabilities found for {target_url}")
+                    return {
+                        'scanner': 'nuclei',
+                        'target_url': target_url,
+                        'findings': [],
+                        'scan_summary': {'total_findings': 0}
+                    }
                 
                 logger.info(f"Nuclei scan completed with {len(findings)} findings")
                 
@@ -90,12 +101,22 @@ class NucleiScanner(BaseScanner):
                 }
                 
             except FileNotFoundError:
-                logger.warning("Nuclei binary not found, using mock data")
-                return self._get_mock_nuclei_data(target_url)
+                logger.error("Nuclei binary not found. Please install Nuclei.")
+                return {
+                    'scanner': 'nuclei',
+                    'target_url': target_url,
+                    'error': 'Nuclei binary not found. Please install Nuclei.',
+                    'findings': []
+                }
             
         except Exception as e:
             logger.error(f"Nuclei scan failed: {e}")
-            return self._get_mock_nuclei_data(target_url)
+            return {
+                'scanner': 'nuclei',
+                'target_url': target_url,
+                'error': str(e),
+                'findings': []
+            }
     
     def _get_mock_nuclei_data(self, target_url: str) -> Dict:
         """Generate mock Nuclei findings for demo purposes"""

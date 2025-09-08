@@ -15,3 +15,24 @@
 2025-09-08 13:34:13,197 WARN stopped: security-framework (terminated by SIGTERM)
 2025-09-08 13:34:13,201 INFO spawned: 'security-framework' with pid 6042
 2025-09-08 13:34:14,203 INFO success: security-framework entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-09-08 13:50:53,373 WARN received SIGTERM indicating exit request
+2025-09-08 13:50:53,374 INFO waiting for security-framework to die
+2025-09-08 13:50:53,577 WARN stopped: security-framework (terminated by SIGTERM)
+2025-09-08 13:50:55,863 INFO RPC interface 'supervisor' initialized
+2025-09-08 13:50:55,863 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2025-09-08 13:50:55,865 INFO daemonizing the supervisord process
+2025-09-08 13:50:55,867 INFO supervisord started with pid 8489
+2025-09-08 13:50:56,871 INFO spawned: 'security-framework' with pid 8491
+2025-09-08 13:50:57,873 INFO success: security-framework entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-09-08 13:54:32,588 INFO waiting for security-framework to stop
+2025-09-08 13:54:32,741 WARN stopped: security-framework (terminated by SIGTERM)
+2025-09-08 13:54:32,746 INFO spawned: 'security-framework' with pid 9057
+2025-09-08 13:54:33,748 INFO success: security-framework entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-09-08 14:01:24,039 INFO waiting for security-framework to stop
+2025-09-08 14:01:24,178 WARN stopped: security-framework (terminated by SIGTERM)
+2025-09-08 14:01:24,183 INFO spawned: 'security-framework' with pid 9994
+2025-09-08 14:01:25,185 INFO success: security-framework entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-09-08 14:03:08,449 INFO waiting for security-framework to stop
+2025-09-08 14:03:08,644 WARN stopped: security-framework (terminated by SIGTERM)
+2025-09-08 14:03:08,650 INFO spawned: 'security-framework' with pid 10254
+2025-09-08 14:03:09,651 INFO success: security-framework entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)

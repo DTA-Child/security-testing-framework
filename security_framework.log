@@ -1737,3 +1737,112 @@
 2025-09-08 13:38:34,101 - app.scanners.nuclei_scanner - INFO - No real vulnerabilities found, adding demo findings
 2025-09-08 13:38:34,101 - app.core.orchestrator - INFO - Completed nuclei scan for b52b040b-452b-4ee4-87bf-fd2727a7e036
 2025-09-08 13:38:34,102 - app.scanners.nikto_scanner - INFO - Starting Nikto scan for https://www.facebook.com/
+2025-09-08 13:50:58,547 - __main__ - INFO - ============================================================
+2025-09-08 13:50:58,547 - __main__ - INFO - 🛡️  Security Testing Framework Starting
+2025-09-08 13:50:58,547 - __main__ - INFO - ============================================================
+2025-09-08 13:50:58,548 - __main__ - INFO - Application: Security Testing Framework
+2025-09-08 13:50:58,548 - __main__ - INFO - Host: 0.0.0.0
+2025-09-08 13:50:58,548 - __main__ - INFO - Port: 8000
+2025-09-08 13:50:58,548 - __main__ - INFO - ZAP Host: localhost:8080
+2025-09-08 13:50:58,548 - __main__ - INFO - Reports Directory: reports
+2025-09-08 13:50:58,548 - __main__ - INFO - Debug Mode: False
+2025-09-08 13:50:58,548 - __main__ - INFO - ============================================================
+2025-09-08 13:50:58,592 - __main__ - INFO - 🚀 Starting web server...
+2025-09-08 13:51:42,013 - app.core.orchestrator - INFO - Starting scan 7e160668-3b7d-42b0-93d1-dea37496fb0b for https://www.facebook.com/
+2025-09-08 13:51:42,020 - app.scanners.zap_scanner - INFO - ZAP connection established
+2025-09-08 13:51:42,020 - app.scanners.zap_scanner - INFO - Starting ZAP scan for https://www.facebook.com/
+2025-09-08 13:51:42,023 - app.scanners.zap_scanner - INFO - Spider scan started with ID: True
+2025-09-08 13:51:42,026 - app.scanners.zap_scanner - INFO - Spider scan completed
+2025-09-08 13:51:42,028 - app.scanners.zap_scanner - INFO - Active scan started with ID: True
+2025-09-08 13:51:42,030 - app.scanners.zap_scanner - INFO - Active scan completed
+2025-09-08 13:51:42,037 - app.core.orchestrator - INFO - Completed zap scan for 7e160668-3b7d-42b0-93d1-dea37496fb0b
+2025-09-08 13:51:42,037 - app.scanners.nuclei_scanner - INFO - Starting Nuclei scan for https://www.facebook.com/
+2025-09-08 13:51:42,372 - app.scanners.nuclei_scanner - INFO - No real vulnerabilities found, adding demo findings
+2025-09-08 13:51:42,373 - app.core.orchestrator - INFO - Completed nuclei scan for 7e160668-3b7d-42b0-93d1-dea37496fb0b
+2025-09-08 13:51:42,373 - app.scanners.nikto_scanner - INFO - Starting Nikto scan for https://www.facebook.com/
+2025-09-08 13:53:57,110 - app.scanners.nikto_scanner - ERROR - XML parsing error: unclosed CDATA section: line 125, column 27
+2025-09-08 13:53:57,111 - app.scanners.nikto_scanner - INFO - No real Nikto findings, using mock data for demo
+2025-09-08 13:53:57,112 - app.core.orchestrator - INFO - Completed nikto scan for 7e160668-3b7d-42b0-93d1-dea37496fb0b
+2025-09-08 13:53:57,112 - app.core.orchestrator - INFO - Completed scan 7e160668-3b7d-42b0-93d1-dea37496fb0b
+2025-09-08 13:54:34,781 - __main__ - INFO - ============================================================
+2025-09-08 13:54:34,781 - __main__ - INFO - 🛡️  Security Testing Framework Starting
+2025-09-08 13:54:34,781 - __main__ - INFO - ============================================================
+2025-09-08 13:54:34,781 - __main__ - INFO - Application: Security Testing Framework
+2025-09-08 13:54:34,782 - __main__ - INFO - Host: 0.0.0.0
+2025-09-08 13:54:34,782 - __main__ - INFO - Port: 8000
+2025-09-08 13:54:34,782 - __main__ - INFO - ZAP Host: localhost:8080
+2025-09-08 13:54:34,782 - __main__ - INFO - Reports Directory: reports
+2025-09-08 13:54:34,782 - __main__ - INFO - Debug Mode: False
+2025-09-08 13:54:34,782 - __main__ - INFO - ============================================================
+2025-09-08 13:54:34,842 - __main__ - INFO - 🚀 Starting web server...
+2025-09-08 13:54:51,985 - app.api.routes - INFO - Starting scan for https://www.facebook.com/
+2025-09-08 13:54:51,986 - app.core.orchestrator - INFO - Starting scan 4addb4ed-bd39-4847-8ce0-03d7d8932d64 for https://www.facebook.com/
+2025-09-08 13:54:51,992 - app.scanners.zap_scanner - INFO - ZAP connection established
+2025-09-08 13:54:51,992 - app.scanners.zap_scanner - INFO - Starting ZAP scan for https://www.facebook.com/
+2025-09-08 13:54:51,996 - app.scanners.zap_scanner - INFO - Spider scan started with ID: True
+2025-09-08 13:54:51,998 - app.scanners.zap_scanner - INFO - Spider scan completed
+2025-09-08 13:54:52,001 - app.scanners.zap_scanner - INFO - Active scan started with ID: True
+2025-09-08 13:54:52,003 - app.scanners.zap_scanner - INFO - Active scan completed
+2025-09-08 13:54:52,010 - app.core.orchestrator - INFO - Completed zap scan for 4addb4ed-bd39-4847-8ce0-03d7d8932d64
+2025-09-08 13:54:52,010 - app.scanners.nuclei_scanner - INFO - Starting Nuclei scan for https://www.facebook.com/
+2025-09-08 13:54:52,328 - app.scanners.nuclei_scanner - INFO - No real vulnerabilities found, adding demo findings
+2025-09-08 13:54:52,329 - app.core.orchestrator - INFO - Completed nuclei scan for 4addb4ed-bd39-4847-8ce0-03d7d8932d64
+2025-09-08 13:54:52,329 - app.scanners.nikto_scanner - INFO - Starting Nikto scan for https://www.facebook.com/
+2025-09-08 13:54:52,329 - app.scanners.nikto_scanner - INFO - Target https://www.facebook.com/ is a protected site, using mock data
+2025-09-08 13:54:52,329 - app.core.orchestrator - INFO - Completed nikto scan for 4addb4ed-bd39-4847-8ce0-03d7d8932d64
+2025-09-08 13:54:52,329 - app.core.orchestrator - INFO - Completed scan 4addb4ed-bd39-4847-8ce0-03d7d8932d64
+2025-09-08 13:57:13,482 - app.core.orchestrator - INFO - Starting scan 19b1a56a-d112-40c7-8f62-f6482cf5072e for https://chatgpt.com/
+2025-09-08 13:57:13,482 - app.scanners.zap_scanner - INFO - Starting ZAP scan for https://chatgpt.com/
+2025-09-08 13:57:13,487 - app.scanners.zap_scanner - INFO - Spider scan started with ID: True
+2025-09-08 13:57:13,491 - app.scanners.zap_scanner - INFO - Spider scan completed
+2025-09-08 13:57:13,494 - app.scanners.zap_scanner - INFO - Active scan started with ID: True
+2025-09-08 13:57:13,498 - app.scanners.zap_scanner - INFO - Active scan completed
+2025-09-08 13:57:13,508 - app.core.orchestrator - INFO - Completed zap scan for 19b1a56a-d112-40c7-8f62-f6482cf5072e
+2025-09-08 13:57:13,508 - app.scanners.nuclei_scanner - INFO - Starting Nuclei scan for https://chatgpt.com/
+2025-09-08 13:57:13,650 - app.scanners.nuclei_scanner - INFO - No real vulnerabilities found, adding demo findings
+2025-09-08 13:57:13,650 - app.core.orchestrator - INFO - Completed nuclei scan for 19b1a56a-d112-40c7-8f62-f6482cf5072e
+2025-09-08 13:57:13,650 - app.scanners.nikto_scanner - INFO - Starting Nikto scan for https://chatgpt.com/
+2025-09-08 14:01:25,931 - __main__ - INFO - ============================================================
+2025-09-08 14:01:25,932 - __main__ - INFO - 🛡️  Security Testing Framework Starting
+2025-09-08 14:01:25,932 - __main__ - INFO - ============================================================
+2025-09-08 14:01:25,932 - __main__ - INFO - Application: Security Testing Framework
+2025-09-08 14:01:25,932 - __main__ - INFO - Host: 0.0.0.0
+2025-09-08 14:01:25,932 - __main__ - INFO - Port: 8000
+2025-09-08 14:01:25,932 - __main__ - INFO - ZAP Host: localhost:8080
+2025-09-08 14:01:25,932 - __main__ - INFO - Reports Directory: reports
+2025-09-08 14:01:25,932 - __main__ - INFO - Debug Mode: False
+2025-09-08 14:01:25,932 - __main__ - INFO - ============================================================
+2025-09-08 14:01:25,985 - __main__ - INFO - 🚀 Starting web server...
+2025-09-08 14:01:29,937 - app.api.routes - INFO - Starting scan for https://httpbin.org/
+2025-09-08 14:01:29,938 - app.core.orchestrator - INFO - Starting scan c7d9cef1-b879-4003-afa8-093ade6f6018 for https://httpbin.org/
+2025-09-08 14:01:30,072 - app.core.orchestrator - INFO - Completed zap scan for c7d9cef1-b879-4003-afa8-093ade6f6018
+2025-09-08 14:01:30,073 - app.scanners.nuclei_scanner - INFO - Starting Nuclei scan for https://httpbin.org/
+2025-09-08 14:01:30,239 - app.scanners.nuclei_scanner - INFO - Nuclei scan completed with no vulnerabilities found for https://httpbin.org/
+2025-09-08 14:01:30,239 - app.core.orchestrator - INFO - Completed nuclei scan for c7d9cef1-b879-4003-afa8-093ade6f6018
+2025-09-08 14:01:30,240 - app.scanners.nikto_scanner - INFO - Starting Nikto scan for https://httpbin.org/
+2025-09-08 14:02:54,636 - app.scanners.nikto_scanner - ERROR - XML parsing error: no element found: line 1, column 0
+2025-09-08 14:02:54,637 - app.scanners.nikto_scanner - INFO - Nikto scan completed with no vulnerabilities found for https://httpbin.org/
+2025-09-08 14:02:54,637 - app.core.orchestrator - INFO - Completed nikto scan for c7d9cef1-b879-4003-afa8-093ade6f6018
+2025-09-08 14:02:54,638 - app.core.orchestrator - INFO - Completed scan c7d9cef1-b879-4003-afa8-093ade6f6018
+2025-09-08 14:03:10,127 - __main__ - INFO - ============================================================
+2025-09-08 14:03:10,128 - __main__ - INFO - 🛡️  Security Testing Framework Starting
+2025-09-08 14:03:10,128 - __main__ - INFO - ============================================================
+2025-09-08 14:03:10,128 - __main__ - INFO - Application: Security Testing Framework
+2025-09-08 14:03:10,128 - __main__ - INFO - Host: 0.0.0.0
+2025-09-08 14:03:10,128 - __main__ - INFO - Port: 8000
+2025-09-08 14:03:10,128 - __main__ - INFO - ZAP Host: localhost:8080
+2025-09-08 14:03:10,128 - __main__ - INFO - Reports Directory: reports
+2025-09-08 14:03:10,128 - __main__ - INFO - Debug Mode: False
+2025-09-08 14:03:10,128 - __main__ - INFO - ============================================================
+2025-09-08 14:03:10,162 - __main__ - INFO - 🚀 Starting web server...
+2025-09-08 14:03:14,336 - app.api.routes - INFO - Starting scan for https://httpbin.org/get
+2025-09-08 14:03:14,337 - app.core.orchestrator - INFO - Starting scan 1efeef64-2c80-4506-8811-e955af9d9553 for https://httpbin.org/get
+2025-09-08 14:03:19,432 - app.scanners.zap_scanner - ERROR - Failed to initialize real scanning: HTTPConnectionPool(host='httpbin.org', port=80): Read timed out. (read timeout=5)
+2025-09-08 14:03:19,433 - app.core.orchestrator - INFO - Completed zap scan for 1efeef64-2c80-4506-8811-e955af9d9553
+2025-09-08 14:03:19,433 - app.scanners.nuclei_scanner - INFO - Starting Nuclei scan for https://httpbin.org/get
+2025-09-08 14:03:19,597 - app.scanners.nuclei_scanner - INFO - Nuclei scan completed with no vulnerabilities found for https://httpbin.org/get
+2025-09-08 14:03:19,598 - app.core.orchestrator - INFO - Completed nuclei scan for 1efeef64-2c80-4506-8811-e955af9d9553
+2025-09-08 14:03:19,598 - app.scanners.nikto_scanner - INFO - Starting Nikto scan for https://httpbin.org/get
+2025-09-08 14:04:19,600 - app.scanners.nikto_scanner - WARNING - Nikto scan timeout for https://httpbin.org/get
+2025-09-08 14:04:20,601 - app.core.orchestrator - INFO - Completed nikto scan for 1efeef64-2c80-4506-8811-e955af9d9553
+2025-09-08 14:04:20,602 - app.core.orchestrator - INFO - Completed scan 1efeef64-2c80-4506-8811-e955af9d9553

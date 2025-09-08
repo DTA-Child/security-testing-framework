@@ -26,13 +26,7 @@ class NiktoScanner(BaseScanner):
         try:
             logger.info(f"Starting Nikto scan for {target_url}")
             
-            # Check if target is a known protected site that blocks scanners
-            protected_domains = ['facebook.com', 'google.com', 'microsoft.com', 'amazon.com', 'apple.com']
-            is_protected = any(domain in target_url.lower() for domain in protected_domains)
-            
-            if is_protected:
-                logger.info(f"Target {target_url} is a protected site, using mock data")
-                return self._get_mock_nikto_data(target_url)
+            # Note: Removed protected site check to allow real scanning of all targets
             
             # Create temporary file for XML results
             with tempfile.NamedTemporaryFile(mode='w+', suffix='.xml', delete=False) as temp_file:
@@ -45,7 +39,7 @@ class NiktoScanner(BaseScanner):
                 '-Format', 'xml',
                 '-output', temp_filename,
                 '-timeout', str(options.get('timeout', 5)),  # Shorter timeout
-                '-maxtime', str(options.get('maxtime', 300)),  # 5 minutes max instead of 1 hour
+                '-maxtime', str(options.get('maxtime', 60)),  # 1 minute max for quick results
                 '-no404',  # Skip 404 checks that can trigger bot detection
                 '-Pause', '2'  # 2 second pause between requests
             ]
@@ -72,20 +66,33 @@ class NiktoScanner(BaseScanner):
                 # Wait with timeout to prevent hanging
                 stdout, stderr = await asyncio.wait_for(
                     process.communicate(), 
-                    timeout=options.get('maxtime', 300)  # 5 minutes max
+                    timeout=options.get('maxtime', 60)  # 1 minute max for quick results
                 )
                 
             except asyncio.TimeoutError:
-                logger.warning(f"Nikto scan timeout for {target_url}, using mock data")
+                logger.warning(f"Nikto scan timeout for {target_url}")
                 if process and process.returncode is None:
                     process.terminate()
                     await asyncio.sleep(1)
                     if process.returncode is None:
                         process.kill()
-                return self._get_mock_nikto_data(target_url)
+                # Return empty results instead of fake data
+                return {
+                    'scanner': 'nikto',
+                    'target_url': target_url,
+                    'findings': [],
+                    'scan_summary': {'total_findings': 0},
+                    'timeout': True
+                }
             except Exception as e:
                 logger.error(f"Nikto process error: {e}")
-                return self._get_mock_nikto_data(target_url)
+                # Return error instead of fake data
+                return {
+                    'scanner': 'nikto',
+                    'target_url': target_url,
+                    'error': str(e),
+                    'findings': []
+                }
             
             # Nikto returns non-zero even on successful scans, so we check differently
             findings = []
@@ -101,10 +108,15 @@ class NiktoScanner(BaseScanner):
             if not findings and stdout:
                 findings = self._parse_text_output(stdout.decode())
             
-            # If still no findings, use mock data for demo
+            # If no findings, return empty results (real scan result)
             if not findings:
-                logger.info("No real Nikto findings, using mock data for demo")
-                return self._get_mock_nikto_data(target_url)
+                logger.info(f"Nikto scan completed with no vulnerabilities found for {target_url}")
+                return {
+                    'scanner': 'nikto',
+                    'target_url': target_url,
+                    'findings': [],
+                    'scan_summary': {'total_findings': 0}
+                }
             
             # Clean up temp file if it exists
             try:
@@ -135,7 +147,12 @@ class NiktoScanner(BaseScanner):
             }
         except Exception as e:
             logger.error(f"Nikto scan failed: {e}")
-            return self._get_mock_nikto_data(target_url)
+            return {
+                'scanner': 'nikto',
+                'target_url': target_url,
+                'error': str(e),
+                'findings': []
+            }
     
     def _get_mock_nikto_data(self, target_url: str) -> Dict:
         """Generate mock Nikto findings for demo purposes"""

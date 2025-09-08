@@ -1929,3 +1929,421 @@ INFO:     10.12.20.94:60004 - "GET /scan/b52b040b-452b-4ee4-87bf-fd2727a7e036 HT
 INFO:     10.12.20.94:55204 - "GET /scan/b52b040b-452b-4ee4-87bf-fd2727a7e036 HTTP/1.1" 200 OK
 INFO:     10.12.20.94:55214 - "GET /scan/b52b040b-452b-4ee4-87bf-fd2727a7e036 HTTP/1.1" 200 OK
 INFO:     10.12.20.94:47960 - "GET /scan/b52b040b-452b-4ee4-87bf-fd2727a7e036 HTTP/1.1" 200 OK
+INFO:     10.12.20.94:46868 - "GET /scan/b52b040b-452b-4ee4-87bf-fd2727a7e036 HTTP/1.1" 200 OK
+INFO:     10.12.20.94:46882 - "GET /scan/b52b040b-452b-4ee4-87bf-fd2727a7e036 HTTP/1.1" 200 OK
+INFO:     10.12.20.94:38536 - "GET /scan/b52b040b-452b-4ee4-87bf-fd2727a7e036 HTTP/1.1" 200 OK
+INFO:     10.12.20.94:38550 - "GET /scan/b52b040b-452b-4ee4-87bf-fd2727a7e036 HTTP/1.1" 200 OK
+INFO:     10.12.20.94:50834 - "GET /scan/b52b040b-452b-4ee4-87bf-fd2727a7e036 HTTP/1.1" 200 OK
+INFO:     10.12.20.94:47272 - "GET /scan/b52b040b-452b-4ee4-87bf-fd2727a7e036 HTTP/1.1" 200 OK
+INFO:     10.12.20.94:47284 - "GET /scan/b52b040b-452b-4ee4-87bf-fd2727a7e036 HTTP/1.1" 200 OK
+INFO:     10.12.20.94:41524 - "GET /scan/b52b040b-452b-4ee4-87bf-fd2727a7e036 HTTP/1.1" 200 OK
+INFO:     10.12.20.94:41528 - "GET /scan/b52b040b-452b-4ee4-87bf-fd2727a7e036 HTTP/1.1" 200 OK
+INFO:     10.12.20.94:40414 - "GET /scan/b52b040b-452b-4ee4-87bf-fd2727a7e036 HTTP/1.1" 200 OK
+INFO:     10.12.20.94:52842 - "GET /scan/b52b040b-452b-4ee4-87bf-fd2727a7e036 HTTP/1.1" 200 OK
+INFO:     10.12.20.94:52852 - "GET /scan/b52b040b-452b-4ee4-87bf-fd2727a7e036 HTTP/1.1" 200 OK
+INFO:     10.12.20.94:34972 - "GET /scan/b52b040b-452b-4ee4-87bf-fd2727a7e036 HTTP/1.1" 200 OK
+INFO:     10.12.20.94:34986 - "GET /scan/b52b040b-452b-4ee4-87bf-fd2727a7e036 HTTP/1.1" 200 OK
+INFO:     10.12.20.94:32864 - "GET /scan/b52b040b-452b-4ee4-87bf-fd2727a7e036 HTTP/1.1" 200 OK
+INFO:     10.12.20.94:40670 - "GET /scan/b52b040b-452b-4ee4-87bf-fd2727a7e036 HTTP/1.1" 200 OK
+INFO:     10.12.20.94:40672 - "GET /scan/b52b040b-452b-4ee4-87bf-fd2727a7e036 HTTP/1.1" 200 OK
+INFO:     10.12.20.94:49278 - "GET /scan/b52b040b-452b-4ee4-87bf-fd2727a7e036 HTTP/1.1" 200 OK
+INFO:     10.12.20.94:49288 - "GET /scan/b52b040b-452b-4ee4-87bf-fd2727a7e036 HTTP/1.1" 200 OK
+INFO:     10.12.20.94:55676 - "GET /scan/b52b040b-452b-4ee4-87bf-fd2727a7e036 HTTP/1.1" 200 OK
+INFO:     10.12.20.94:52338 - "GET /scan/b52b040b-452b-4ee4-87bf-fd2727a7e036 HTTP/1.1" 200 OK
+INFO:     10.12.20.94:52348 - "GET /scan/b52b040b-452b-4ee4-87bf-fd2727a7e036 HTTP/1.1" 200 OK
+INFO:     10.12.20.94:37634 - "GET /scan/b52b040b-452b-4ee4-87bf-fd2727a7e036 HTTP/1.1" 200 OK
+INFO:     10.12.20.94:37638 - "GET /scan/b52b040b-452b-4ee4-87bf-fd2727a7e036 HTTP/1.1" 200 OK
+INFO:     10.12.20.94:49662 - "GET /scan/b52b040b-452b-4ee4-87bf-fd2727a7e036 HTTP/1.1" 200 OK
+INFO:     10.12.20.94:51318 - "GET /scan/b52b040b-452b-4ee4-87bf-fd2727a7e036 HTTP/1.1" 200 OK
+INFO:     10.12.20.94:51326 - "GET /scan/b52b040b-452b-4ee4-87bf-fd2727a7e036 HTTP/1.1" 200 OK
+INFO:     10.12.20.94:37058 - "GET /scan/b52b040b-452b-4ee4-87bf-fd2727a7e036 HTTP/1.1" 200 OK
+INFO:     10.12.20.94:37072 - "GET /scan/b52b040b-452b-4ee4-87bf-fd2727a7e036 HTTP/1.1" 200 OK
+INFO:     10.12.20.94:59876 - "GET /scan/b52b040b-452b-4ee4-87bf-fd2727a7e036 HTTP/1.1" 200 OK
+INFO:     10.12.20.94:34278 - "GET /scan/b52b040b-452b-4ee4-87bf-fd2727a7e036 HTTP/1.1" 200 OK
+INFO:     10.12.20.94:34284 - "GET /scan/b52b040b-452b-4ee4-87bf-fd2727a7e036 HTTP/1.1" 200 OK
+INFO:     10.12.20.94:43478 - "GET /scan/b52b040b-452b-4ee4-87bf-fd2727a7e036 HTTP/1.1" 200 OK
+INFO:     10.12.20.94:43484 - "GET /scan/b52b040b-452b-4ee4-87bf-fd2727a7e036 HTTP/1.1" 200 OK
+INFO:     10.12.20.94:48636 - "GET /scan/b52b040b-452b-4ee4-87bf-fd2727a7e036 HTTP/1.1" 200 OK
+INFO:     10.12.20.94:57154 - "GET /scan/b52b040b-452b-4ee4-87bf-fd2727a7e036 HTTP/1.1" 200 OK
+INFO:     10.12.20.94:57162 - "GET /scan/b52b040b-452b-4ee4-87bf-fd2727a7e036 HTTP/1.1" 200 OK
+INFO:     10.12.20.94:58490 - "GET /scan/b52b040b-452b-4ee4-87bf-fd2727a7e036 HTTP/1.1" 200 OK
+INFO:     10.12.20.94:58504 - "GET /scan/b52b040b-452b-4ee4-87bf-fd2727a7e036 HTTP/1.1" 200 OK
+INFO:     10.12.20.94:35114 - "GET /scan/b52b040b-452b-4ee4-87bf-fd2727a7e036 HTTP/1.1" 200 OK
+INFO:     10.12.20.94:35124 - "GET /scan/b52b040b-452b-4ee4-87bf-fd2727a7e036 HTTP/1.1" 200 OK
+INFO:     10.12.20.94:55754 - "GET /scan/b52b040b-452b-4ee4-87bf-fd2727a7e036 HTTP/1.1" 200 OK
+INFO:     10.12.20.94:44576 - "GET /scan/b52b040b-452b-4ee4-87bf-fd2727a7e036 HTTP/1.1" 200 OK
+INFO:     10.12.20.94:44588 - "GET /scan/b52b040b-452b-4ee4-87bf-fd2727a7e036 HTTP/1.1" 200 OK
+INFO:     10.12.20.94:39328 - "GET /scan/b52b040b-452b-4ee4-87bf-fd2727a7e036 HTTP/1.1" 200 OK
+INFO:     10.12.20.94:39344 - "GET /scan/b52b040b-452b-4ee4-87bf-fd2727a7e036 HTTP/1.1" 200 OK
+INFO:     10.12.20.94:33566 - "GET /scan/b52b040b-452b-4ee4-87bf-fd2727a7e036 HTTP/1.1" 200 OK
+INFO:     10.12.20.94:42270 - "GET /scan/b52b040b-452b-4ee4-87bf-fd2727a7e036 HTTP/1.1" 200 OK
+INFO:     10.12.20.94:42284 - "GET /scan/b52b040b-452b-4ee4-87bf-fd2727a7e036 HTTP/1.1" 200 OK
+INFO:     10.12.20.94:55960 - "GET /scan/b52b040b-452b-4ee4-87bf-fd2727a7e036 HTTP/1.1" 200 OK
+INFO:     10.12.20.94:55972 - "GET /scan/b52b040b-452b-4ee4-87bf-fd2727a7e036 HTTP/1.1" 200 OK
+INFO:     10.12.20.94:56494 - "GET /scan/b52b040b-452b-4ee4-87bf-fd2727a7e036 HTTP/1.1" 200 OK
+INFO:     10.12.20.94:34234 - "GET /scan/b52b040b-452b-4ee4-87bf-fd2727a7e036 HTTP/1.1" 200 OK
+INFO:     10.12.20.94:34238 - "GET /scan/b52b040b-452b-4ee4-87bf-fd2727a7e036 HTTP/1.1" 200 OK
+INFO:     10.12.20.94:40572 - "GET /scan/b52b040b-452b-4ee4-87bf-fd2727a7e036 HTTP/1.1" 200 OK
+INFO:     10.12.20.94:40584 - "GET /scan/b52b040b-452b-4ee4-87bf-fd2727a7e036 HTTP/1.1" 200 OK
+INFO:     10.12.20.94:44960 - "GET /scan/b52b040b-452b-4ee4-87bf-fd2727a7e036 HTTP/1.1" 200 OK
+INFO:     10.12.20.94:51876 - "GET /scan/b52b040b-452b-4ee4-87bf-fd2727a7e036 HTTP/1.1" 200 OK
+INFO:     10.12.20.94:51884 - "GET /scan/b52b040b-452b-4ee4-87bf-fd2727a7e036 HTTP/1.1" 200 OK
+INFO:     10.12.20.94:35352 - "GET /scan/b52b040b-452b-4ee4-87bf-fd2727a7e036 HTTP/1.1" 200 OK
+INFO:     10.12.20.94:35356 - "GET /scan/b52b040b-452b-4ee4-87bf-fd2727a7e036 HTTP/1.1" 200 OK
+INFO:     10.12.20.94:34938 - "GET /scan/b52b040b-452b-4ee4-87bf-fd2727a7e036 HTTP/1.1" 200 OK
+INFO:     10.12.20.94:35900 - "GET /scan/b52b040b-452b-4ee4-87bf-fd2727a7e036 HTTP/1.1" 200 OK
+INFO:     10.12.20.94:35902 - "GET /scan/b52b040b-452b-4ee4-87bf-fd2727a7e036 HTTP/1.1" 200 OK
+INFO:     10.12.20.94:55594 - "GET /scan/b52b040b-452b-4ee4-87bf-fd2727a7e036 HTTP/1.1" 200 OK
+INFO:     10.12.20.94:55610 - "GET /scan/b52b040b-452b-4ee4-87bf-fd2727a7e036 HTTP/1.1" 200 OK
+INFO:     10.12.20.94:33138 - "GET /scan/b52b040b-452b-4ee4-87bf-fd2727a7e036 HTTP/1.1" 200 OK
+INFO:     10.12.20.94:34014 - "GET /scan/b52b040b-452b-4ee4-87bf-fd2727a7e036 HTTP/1.1" 200 OK
+INFO:     10.12.20.94:34022 - "GET /scan/b52b040b-452b-4ee4-87bf-fd2727a7e036 HTTP/1.1" 200 OK
+INFO:     10.12.20.94:36372 - "GET /scan/b52b040b-452b-4ee4-87bf-fd2727a7e036 HTTP/1.1" 200 OK
+INFO:     10.12.20.94:36386 - "GET /scan/b52b040b-452b-4ee4-87bf-fd2727a7e036 HTTP/1.1" 200 OK
+INFO:     10.12.20.94:53400 - "GET /scan/b52b040b-452b-4ee4-87bf-fd2727a7e036 HTTP/1.1" 200 OK
+INFO:     10.12.20.94:54674 - "GET /scan/b52b040b-452b-4ee4-87bf-fd2727a7e036 HTTP/1.1" 200 OK
+INFO:     10.12.20.94:54684 - "GET /scan/b52b040b-452b-4ee4-87bf-fd2727a7e036 HTTP/1.1" 200 OK
+INFO:     10.12.20.94:47342 - "GET /scan/b52b040b-452b-4ee4-87bf-fd2727a7e036 HTTP/1.1" 200 OK
+INFO:     10.12.20.94:47354 - "GET /scan/b52b040b-452b-4ee4-87bf-fd2727a7e036 HTTP/1.1" 200 OK
+INFO:     10.12.20.94:48940 - "GET /scan/b52b040b-452b-4ee4-87bf-fd2727a7e036 HTTP/1.1" 200 OK
+INFO:     10.12.20.94:51596 - "GET /scan/b52b040b-452b-4ee4-87bf-fd2727a7e036 HTTP/1.1" 200 OK
+INFO:     10.12.20.94:51604 - "GET /scan/b52b040b-452b-4ee4-87bf-fd2727a7e036 HTTP/1.1" 200 OK
+INFO:     10.12.20.94:55084 - "GET /scan/b52b040b-452b-4ee4-87bf-fd2727a7e036 HTTP/1.1" 200 OK
+INFO:     10.12.20.94:55088 - "GET /scan/b52b040b-452b-4ee4-87bf-fd2727a7e036 HTTP/1.1" 200 OK
+INFO:     10.12.20.94:38544 - "GET /scan/b52b040b-452b-4ee4-87bf-fd2727a7e036 HTTP/1.1" 200 OK
+INFO:     10.12.20.94:43994 - "GET /scan/b52b040b-452b-4ee4-87bf-fd2727a7e036 HTTP/1.1" 200 OK
+INFO:     10.12.20.94:44002 - "GET /scan/b52b040b-452b-4ee4-87bf-fd2727a7e036 HTTP/1.1" 200 OK
+INFO:     10.12.20.94:40568 - "GET /scan/b52b040b-452b-4ee4-87bf-fd2727a7e036 HTTP/1.1" 200 OK
+INFO:     10.12.20.94:40570 - "GET /scan/b52b040b-452b-4ee4-87bf-fd2727a7e036 HTTP/1.1" 200 OK
+INFO:     10.12.20.94:33840 - "GET /scan/b52b040b-452b-4ee4-87bf-fd2727a7e036 HTTP/1.1" 200 OK
+INFO:     10.12.20.94:48156 - "GET /scan/b52b040b-452b-4ee4-87bf-fd2727a7e036 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42998 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     10.12.20.94:48162 - "GET /scan/b52b040b-452b-4ee4-87bf-fd2727a7e036 HTTP/1.1" 200 OK
+INFO:     10.12.20.94:52610 - "GET /scan/b52b040b-452b-4ee4-87bf-fd2727a7e036 HTTP/1.1" 200 OK
+INFO:     10.12.20.94:52626 - "GET /scan/b52b040b-452b-4ee4-87bf-fd2727a7e036 HTTP/1.1" 200 OK
+INFO:     10.12.20.94:40932 - "GET /scan/b52b040b-452b-4ee4-87bf-fd2727a7e036 HTTP/1.1" 200 OK
+INFO:     10.12.20.94:41504 - "GET /scan/b52b040b-452b-4ee4-87bf-fd2727a7e036 HTTP/1.1" 200 OK
+INFO:     10.12.20.94:41506 - "GET /scan/b52b040b-452b-4ee4-87bf-fd2727a7e036 HTTP/1.1" 200 OK
+INFO:     10.12.20.94:53932 - "GET /scan/b52b040b-452b-4ee4-87bf-fd2727a7e036 HTTP/1.1" 200 OK
+INFO:     10.12.20.94:53942 - "GET /scan/b52b040b-452b-4ee4-87bf-fd2727a7e036 HTTP/1.1" 200 OK
+INFO:     10.12.20.94:33842 - "GET /scan/b52b040b-452b-4ee4-87bf-fd2727a7e036 HTTP/1.1" 200 OK
+2025-09-08 13:50:58,547 - __main__ - INFO - ============================================================
+2025-09-08 13:50:58,547 - __main__ - INFO - 🛡️  Security Testing Framework Starting
+2025-09-08 13:50:58,547 - __main__ - INFO - ============================================================
+2025-09-08 13:50:58,548 - __main__ - INFO - Application: Security Testing Framework
+2025-09-08 13:50:58,548 - __main__ - INFO - Host: 0.0.0.0
+2025-09-08 13:50:58,548 - __main__ - INFO - Port: 8000
+2025-09-08 13:50:58,548 - __main__ - INFO - ZAP Host: localhost:8080
+2025-09-08 13:50:58,548 - __main__ - INFO - Reports Directory: reports
+2025-09-08 13:50:58,548 - __main__ - INFO - Debug Mode: False
+2025-09-08 13:50:58,548 - __main__ - INFO - ============================================================
+
+╔══════════════════════════════════════════════════════════════════════════════╗
+║                          🛡️  SECURITY TESTING FRAMEWORK                      ║
+╠══════════════════════════════════════════════════════════════════════════════╣
+║                                                                              ║
+║  🌐 Web Interface: http://0.0.0.0:8000                                          ║
+║  📊 API Documentation: http://0.0.0.0:8000/docs                               ║
+║  🔧 ZAP Proxy: http://localhost:8080                                             ║
+║                                                                              ║
+║  🔍 Available Scanners:                                                      ║
+║    • OWASP ZAP - Web Application Security Scanner                           ║
+║    • Nuclei - Fast Vulnerability Scanner                                    ║
+║    • Nikto - Web Server Scanner                                             ║
+║                                                                              ║
+║  📋 OWASP Top 10 2021 Coverage:                                             ║
+║    • A01:2021-Broken Access Control                                         ║
+║    • A02:2021-Cryptographic Failures                                        ║
+║    • A03:2021-Injection                                                     ║
+║    • A04:2021-Insecure Design                                               ║
+║    • A05:2021-Security Misconfiguration                                     ║
+║    • A06:2021-Vulnerable and Outdated Components                            ║
+║    • A07:2021-Identification and Authentication Failures                    ║
+║    • A08:2021-Software and Data Integrity Failures                         ║
+║    • A09:2021-Security Logging and Monitoring Failures                     ║
+║    • A10:2021-Server-Side Request Forgery                                   ║
+║                                                                              ║
+║  🚀 Ready to secure your applications!                                      ║
+║                                                                              ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+    
+2025-09-08 13:50:58,592 - __main__ - INFO - 🚀 Starting web server...
+INFO:     10.12.20.94:37958 - "GET /scan/b52b040b-452b-4ee4-87bf-fd2727a7e036 HTTP/1.1" 404 Not Found
+INFO:     10.12.20.94:37968 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     10.12.20.94:59580 - "GET /scan HTTP/1.1" 200 OK
+INFO:     10.12.20.94:59580 - "GET /scans HTTP/1.1" 200 OK
+INFO:     10.12.20.94:59580 - "GET /scan HTTP/1.1" 200 OK
+INFO:     10.12.20.94:59580 - "GET /static/css/style.css HTTP/1.1" 500 Internal Server Error
+INFO:     10.12.20.94:44012 - "POST /scan HTTP/1.1" 303 See Other
+2025-09-08 13:51:42,013 - app.core.orchestrator - INFO - Starting scan 7e160668-3b7d-42b0-93d1-dea37496fb0b for https://www.facebook.com/
+2025-09-08 13:51:42,020 - app.scanners.zap_scanner - INFO - ZAP connection established
+2025-09-08 13:51:42,020 - app.scanners.zap_scanner - INFO - Starting ZAP scan for https://www.facebook.com/
+2025-09-08 13:51:42,023 - app.scanners.zap_scanner - INFO - Spider scan started with ID: True
+2025-09-08 13:51:42,026 - app.scanners.zap_scanner - INFO - Spider scan completed
+2025-09-08 13:51:42,028 - app.scanners.zap_scanner - INFO - Active scan started with ID: True
+2025-09-08 13:51:42,030 - app.scanners.zap_scanner - INFO - Active scan completed
+2025-09-08 13:51:42,037 - app.core.orchestrator - INFO - Completed zap scan for 7e160668-3b7d-42b0-93d1-dea37496fb0b
+2025-09-08 13:51:42,037 - app.scanners.nuclei_scanner - INFO - Starting Nuclei scan for https://www.facebook.com/
+INFO:     10.12.20.94:44012 - "GET /scan/7e160668-3b7d-42b0-93d1-dea37496fb0b HTTP/1.1" 200 OK
+2025-09-08 13:51:42,372 - app.scanners.nuclei_scanner - INFO - No real vulnerabilities found, adding demo findings
+2025-09-08 13:51:42,373 - app.core.orchestrator - INFO - Completed nuclei scan for 7e160668-3b7d-42b0-93d1-dea37496fb0b
+2025-09-08 13:51:42,373 - app.scanners.nikto_scanner - INFO - Starting Nikto scan for https://www.facebook.com/
+INFO:     10.12.20.94:44014 - "GET /scan/7e160668-3b7d-42b0-93d1-dea37496fb0b HTTP/1.1" 200 OK
+INFO:     10.12.20.94:58398 - "GET /scan/7e160668-3b7d-42b0-93d1-dea37496fb0b HTTP/1.1" 200 OK
+INFO:     10.12.20.94:49904 - "GET /scan/7e160668-3b7d-42b0-93d1-dea37496fb0b HTTP/1.1" 200 OK
+INFO:     10.12.20.94:49908 - "GET /scan/7e160668-3b7d-42b0-93d1-dea37496fb0b HTTP/1.1" 200 OK
+INFO:     10.12.20.94:53590 - "GET /scan/7e160668-3b7d-42b0-93d1-dea37496fb0b HTTP/1.1" 200 OK
+INFO:     10.12.20.94:53596 - "GET /scan/7e160668-3b7d-42b0-93d1-dea37496fb0b HTTP/1.1" 200 OK
+INFO:     10.12.20.94:38844 - "GET /scan/7e160668-3b7d-42b0-93d1-dea37496fb0b HTTP/1.1" 200 OK
+INFO:     10.12.20.94:38852 - "GET /scan/7e160668-3b7d-42b0-93d1-dea37496fb0b HTTP/1.1" 200 OK
+INFO:     10.12.20.94:49476 - "GET /scan/7e160668-3b7d-42b0-93d1-dea37496fb0b HTTP/1.1" 200 OK
+INFO:     10.12.20.94:52894 - "GET /scan/7e160668-3b7d-42b0-93d1-dea37496fb0b HTTP/1.1" 200 OK
+INFO:     10.12.20.94:52910 - "GET /scan/7e160668-3b7d-42b0-93d1-dea37496fb0b HTTP/1.1" 200 OK
+INFO:     10.12.20.94:32912 - "GET /scan/7e160668-3b7d-42b0-93d1-dea37496fb0b HTTP/1.1" 200 OK
+INFO:     10.12.20.94:32924 - "GET /scan/7e160668-3b7d-42b0-93d1-dea37496fb0b HTTP/1.1" 200 OK
+INFO:     10.12.20.94:53750 - "GET /scan/7e160668-3b7d-42b0-93d1-dea37496fb0b HTTP/1.1" 200 OK
+INFO:     10.12.20.94:36734 - "GET /scan/7e160668-3b7d-42b0-93d1-dea37496fb0b HTTP/1.1" 200 OK
+INFO:     10.12.20.94:36746 - "GET /scan/7e160668-3b7d-42b0-93d1-dea37496fb0b HTTP/1.1" 200 OK
+INFO:     10.12.20.94:54092 - "GET /scan/7e160668-3b7d-42b0-93d1-dea37496fb0b HTTP/1.1" 200 OK
+INFO:     10.12.20.94:54108 - "GET /scan/7e160668-3b7d-42b0-93d1-dea37496fb0b HTTP/1.1" 200 OK
+INFO:     10.12.20.94:56936 - "GET /scan/7e160668-3b7d-42b0-93d1-dea37496fb0b HTTP/1.1" 200 OK
+INFO:     10.12.20.94:56940 - "GET /scan/7e160668-3b7d-42b0-93d1-dea37496fb0b HTTP/1.1" 200 OK
+INFO:     10.12.20.94:55460 - "GET /scan/7e160668-3b7d-42b0-93d1-dea37496fb0b HTTP/1.1" 200 OK
+INFO:     10.12.20.94:53568 - "GET /api/scans HTTP/1.1" 200 OK
+INFO:     10.12.20.94:53568 - "GET /scan/7e160668-3b7d-42b0-93d1-dea37496fb0b HTTP/1.1" 200 OK
+INFO:     10.12.20.94:53582 - "GET /scan/7e160668-3b7d-42b0-93d1-dea37496fb0b HTTP/1.1" 200 OK
+2025-09-08 13:53:57,110 - app.scanners.nikto_scanner - ERROR - XML parsing error: unclosed CDATA section: line 125, column 27
+2025-09-08 13:53:57,111 - app.scanners.nikto_scanner - INFO - No real Nikto findings, using mock data for demo
+2025-09-08 13:53:57,112 - app.core.orchestrator - INFO - Completed nikto scan for 7e160668-3b7d-42b0-93d1-dea37496fb0b
+2025-09-08 13:53:57,112 - app.core.orchestrator - INFO - Completed scan 7e160668-3b7d-42b0-93d1-dea37496fb0b
+INFO:     10.12.20.94:52788 - "GET /scan/7e160668-3b7d-42b0-93d1-dea37496fb0b HTTP/1.1" 200 OK
+INFO:     10.12.20.94:44672 - "GET /report/7e160668-3b7d-42b0-93d1-dea37496fb0b HTTP/1.1" 200 OK
+2025-09-08 13:54:34,781 - __main__ - INFO - ============================================================
+2025-09-08 13:54:34,781 - __main__ - INFO - 🛡️  Security Testing Framework Starting
+2025-09-08 13:54:34,781 - __main__ - INFO - ============================================================
+2025-09-08 13:54:34,781 - __main__ - INFO - Application: Security Testing Framework
+2025-09-08 13:54:34,782 - __main__ - INFO - Host: 0.0.0.0
+2025-09-08 13:54:34,782 - __main__ - INFO - Port: 8000
+2025-09-08 13:54:34,782 - __main__ - INFO - ZAP Host: localhost:8080
+2025-09-08 13:54:34,782 - __main__ - INFO - Reports Directory: reports
+2025-09-08 13:54:34,782 - __main__ - INFO - Debug Mode: False
+2025-09-08 13:54:34,782 - __main__ - INFO - ============================================================
+
+╔══════════════════════════════════════════════════════════════════════════════╗
+║                          🛡️  SECURITY TESTING FRAMEWORK                      ║
+╠══════════════════════════════════════════════════════════════════════════════╣
+║                                                                              ║
+║  🌐 Web Interface: http://0.0.0.0:8000                                          ║
+║  📊 API Documentation: http://0.0.0.0:8000/docs                               ║
+║  🔧 ZAP Proxy: http://localhost:8080                                             ║
+║                                                                              ║
+║  🔍 Available Scanners:                                                      ║
+║    • OWASP ZAP - Web Application Security Scanner                           ║
+║    • Nuclei - Fast Vulnerability Scanner                                    ║
+║    • Nikto - Web Server Scanner                                             ║
+║                                                                              ║
+║  📋 OWASP Top 10 2021 Coverage:                                             ║
+║    • A01:2021-Broken Access Control                                         ║
+║    • A02:2021-Cryptographic Failures                                        ║
+║    • A03:2021-Injection                                                     ║
+║    • A04:2021-Insecure Design                                               ║
+║    • A05:2021-Security Misconfiguration                                     ║
+║    • A06:2021-Vulnerable and Outdated Components                            ║
+║    • A07:2021-Identification and Authentication Failures                    ║
+║    • A08:2021-Software and Data Integrity Failures                         ║
+║    • A09:2021-Security Logging and Monitoring Failures                     ║
+║    • A10:2021-Server-Side Request Forgery                                   ║
+║                                                                              ║
+║  🚀 Ready to secure your applications!                                      ║
+║                                                                              ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+    
+2025-09-08 13:54:34,842 - __main__ - INFO - 🚀 Starting web server...
+INFO:     10.12.20.94:57150 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     10.12.20.94:57150 - "POST /api/scans HTTP/1.1" 405 Method Not Allowed
+2025-09-08 13:54:51,985 - app.api.routes - INFO - Starting scan for https://www.facebook.com/
+INFO:     10.12.20.94:41892 - "POST /api/scan HTTP/1.1" 200 OK
+2025-09-08 13:54:51,986 - app.core.orchestrator - INFO - Starting scan 4addb4ed-bd39-4847-8ce0-03d7d8932d64 for https://www.facebook.com/
+2025-09-08 13:54:51,992 - app.scanners.zap_scanner - INFO - ZAP connection established
+2025-09-08 13:54:51,992 - app.scanners.zap_scanner - INFO - Starting ZAP scan for https://www.facebook.com/
+2025-09-08 13:54:51,996 - app.scanners.zap_scanner - INFO - Spider scan started with ID: True
+2025-09-08 13:54:51,998 - app.scanners.zap_scanner - INFO - Spider scan completed
+2025-09-08 13:54:52,001 - app.scanners.zap_scanner - INFO - Active scan started with ID: True
+2025-09-08 13:54:52,003 - app.scanners.zap_scanner - INFO - Active scan completed
+2025-09-08 13:54:52,010 - app.core.orchestrator - INFO - Completed zap scan for 4addb4ed-bd39-4847-8ce0-03d7d8932d64
+2025-09-08 13:54:52,010 - app.scanners.nuclei_scanner - INFO - Starting Nuclei scan for https://www.facebook.com/
+2025-09-08 13:54:52,328 - app.scanners.nuclei_scanner - INFO - No real vulnerabilities found, adding demo findings
+2025-09-08 13:54:52,329 - app.core.orchestrator - INFO - Completed nuclei scan for 4addb4ed-bd39-4847-8ce0-03d7d8932d64
+2025-09-08 13:54:52,329 - app.scanners.nikto_scanner - INFO - Starting Nikto scan for https://www.facebook.com/
+2025-09-08 13:54:52,329 - app.scanners.nikto_scanner - INFO - Target https://www.facebook.com/ is a protected site, using mock data
+2025-09-08 13:54:52,329 - app.core.orchestrator - INFO - Completed nikto scan for 4addb4ed-bd39-4847-8ce0-03d7d8932d64
+2025-09-08 13:54:52,329 - app.core.orchestrator - INFO - Completed scan 4addb4ed-bd39-4847-8ce0-03d7d8932d64
+INFO:     10.12.20.94:37652 - "GET /api/scan/4addb4ed-bd39-4847-8ce0-03d7d8932d64 HTTP/1.1" 200 OK
+INFO:     10.12.20.94:54050 - "GET / HTTP/1.1" 200 OK
+INFO:     10.12.20.94:54050 - "GET /static/css/style.css HTTP/1.1" 200 OK
+INFO:     10.12.20.94:36518 - "GET / HTTP/1.1" 200 OK
+INFO:     10.12.20.94:58800 - "GET /scan HTTP/1.1" 200 OK
+INFO:     10.12.20.94:58800 - "POST /scan HTTP/1.1" 303 See Other
+2025-09-08 13:57:13,482 - app.core.orchestrator - INFO - Starting scan 19b1a56a-d112-40c7-8f62-f6482cf5072e for https://chatgpt.com/
+2025-09-08 13:57:13,482 - app.scanners.zap_scanner - INFO - Starting ZAP scan for https://chatgpt.com/
+2025-09-08 13:57:13,487 - app.scanners.zap_scanner - INFO - Spider scan started with ID: True
+2025-09-08 13:57:13,491 - app.scanners.zap_scanner - INFO - Spider scan completed
+2025-09-08 13:57:13,494 - app.scanners.zap_scanner - INFO - Active scan started with ID: True
+2025-09-08 13:57:13,498 - app.scanners.zap_scanner - INFO - Active scan completed
+2025-09-08 13:57:13,508 - app.core.orchestrator - INFO - Completed zap scan for 19b1a56a-d112-40c7-8f62-f6482cf5072e
+2025-09-08 13:57:13,508 - app.scanners.nuclei_scanner - INFO - Starting Nuclei scan for https://chatgpt.com/
+2025-09-08 13:57:13,650 - app.scanners.nuclei_scanner - INFO - No real vulnerabilities found, adding demo findings
+2025-09-08 13:57:13,650 - app.core.orchestrator - INFO - Completed nuclei scan for 19b1a56a-d112-40c7-8f62-f6482cf5072e
+2025-09-08 13:57:13,650 - app.scanners.nikto_scanner - INFO - Starting Nikto scan for https://chatgpt.com/
+INFO:     10.12.20.94:58800 - "GET /scan/19b1a56a-d112-40c7-8f62-f6482cf5072e HTTP/1.1" 200 OK
+INFO:     10.12.20.94:38124 - "GET /scan/19b1a56a-d112-40c7-8f62-f6482cf5072e HTTP/1.1" 200 OK
+INFO:     10.12.20.94:38132 - "GET /scan/19b1a56a-d112-40c7-8f62-f6482cf5072e HTTP/1.1" 200 OK
+INFO:     10.12.20.94:58402 - "GET /scan/19b1a56a-d112-40c7-8f62-f6482cf5072e HTTP/1.1" 200 OK
+INFO:     10.12.20.94:58414 - "GET /scan/19b1a56a-d112-40c7-8f62-f6482cf5072e HTTP/1.1" 200 OK
+INFO:     10.12.20.94:56130 - "GET /scan/19b1a56a-d112-40c7-8f62-f6482cf5072e HTTP/1.1" 200 OK
+INFO:     10.12.20.94:43162 - "GET /scan/19b1a56a-d112-40c7-8f62-f6482cf5072e HTTP/1.1" 200 OK
+INFO:     10.12.20.94:43166 - "GET /scan/19b1a56a-d112-40c7-8f62-f6482cf5072e HTTP/1.1" 200 OK
+INFO:     10.12.20.94:38750 - "GET /scan/19b1a56a-d112-40c7-8f62-f6482cf5072e HTTP/1.1" 200 OK
+INFO:     10.12.20.94:38752 - "GET /scan/19b1a56a-d112-40c7-8f62-f6482cf5072e HTTP/1.1" 200 OK
+INFO:     10.12.20.94:51844 - "GET /scan/19b1a56a-d112-40c7-8f62-f6482cf5072e HTTP/1.1" 200 OK
+INFO:     10.12.20.94:51860 - "GET /scan/19b1a56a-d112-40c7-8f62-f6482cf5072e HTTP/1.1" 200 OK
+INFO:     10.12.20.94:45540 - "GET /scan/19b1a56a-d112-40c7-8f62-f6482cf5072e HTTP/1.1" 200 OK
+INFO:     10.12.20.94:33582 - "GET /scan/19b1a56a-d112-40c7-8f62-f6482cf5072e HTTP/1.1" 200 OK
+INFO:     10.12.20.94:33594 - "GET /scan/19b1a56a-d112-40c7-8f62-f6482cf5072e HTTP/1.1" 200 OK
+INFO:     10.12.20.94:58768 - "GET /scan/19b1a56a-d112-40c7-8f62-f6482cf5072e HTTP/1.1" 200 OK
+INFO:     10.12.20.94:58782 - "GET /scan/19b1a56a-d112-40c7-8f62-f6482cf5072e HTTP/1.1" 200 OK
+INFO:     10.12.20.94:60990 - "GET /scan/19b1a56a-d112-40c7-8f62-f6482cf5072e HTTP/1.1" 200 OK
+INFO:     10.12.20.94:34718 - "GET /scan/19b1a56a-d112-40c7-8f62-f6482cf5072e HTTP/1.1" 200 OK
+INFO:     10.12.20.94:34726 - "GET /scan/19b1a56a-d112-40c7-8f62-f6482cf5072e HTTP/1.1" 200 OK
+INFO:     10.12.20.94:38378 - "GET /scan/19b1a56a-d112-40c7-8f62-f6482cf5072e HTTP/1.1" 200 OK
+INFO:     10.12.20.94:38382 - "GET /scan/19b1a56a-d112-40c7-8f62-f6482cf5072e HTTP/1.1" 200 OK
+INFO:     10.12.20.94:47808 - "GET /scan/19b1a56a-d112-40c7-8f62-f6482cf5072e HTTP/1.1" 200 OK
+INFO:     10.12.20.94:60242 - "GET /scan/19b1a56a-d112-40c7-8f62-f6482cf5072e HTTP/1.1" 200 OK
+INFO:     10.12.20.94:60258 - "GET /scan/19b1a56a-d112-40c7-8f62-f6482cf5072e HTTP/1.1" 200 OK
+INFO:     10.12.20.94:55244 - "GET /scan/19b1a56a-d112-40c7-8f62-f6482cf5072e HTTP/1.1" 200 OK
+INFO:     10.12.20.94:55248 - "GET /scan/19b1a56a-d112-40c7-8f62-f6482cf5072e HTTP/1.1" 200 OK
+INFO:     10.12.20.94:42812 - "GET /scan/19b1a56a-d112-40c7-8f62-f6482cf5072e HTTP/1.1" 200 OK
+INFO:     10.12.20.94:39104 - "GET /scan/19b1a56a-d112-40c7-8f62-f6482cf5072e HTTP/1.1" 200 OK
+INFO:     10.12.20.94:39120 - "GET /scan/19b1a56a-d112-40c7-8f62-f6482cf5072e HTTP/1.1" 200 OK
+INFO:     10.12.20.94:55488 - "GET /scan/19b1a56a-d112-40c7-8f62-f6482cf5072e HTTP/1.1" 200 OK
+INFO:     10.12.20.94:55496 - "GET /scan/19b1a56a-d112-40c7-8f62-f6482cf5072e HTTP/1.1" 200 OK
+INFO:     10.12.20.94:41736 - "GET /scan/19b1a56a-d112-40c7-8f62-f6482cf5072e HTTP/1.1" 200 OK
+INFO:     10.12.20.94:32818 - "GET /scan/19b1a56a-d112-40c7-8f62-f6482cf5072e HTTP/1.1" 200 OK
+INFO:     10.12.20.94:32830 - "GET /scan/19b1a56a-d112-40c7-8f62-f6482cf5072e HTTP/1.1" 200 OK
+INFO:     10.12.20.94:51320 - "GET /scan/19b1a56a-d112-40c7-8f62-f6482cf5072e HTTP/1.1" 200 OK
+INFO:     10.12.20.94:51334 - "GET /scan/19b1a56a-d112-40c7-8f62-f6482cf5072e HTTP/1.1" 200 OK
+INFO:     10.12.20.94:39500 - "GET /scan/19b1a56a-d112-40c7-8f62-f6482cf5072e HTTP/1.1" 200 OK
+INFO:     10.12.20.94:32886 - "GET /scan/19b1a56a-d112-40c7-8f62-f6482cf5072e HTTP/1.1" 200 OK
+INFO:     10.12.20.94:32900 - "GET /scan/19b1a56a-d112-40c7-8f62-f6482cf5072e HTTP/1.1" 200 OK
+INFO:     10.12.20.94:33346 - "GET /scan/19b1a56a-d112-40c7-8f62-f6482cf5072e HTTP/1.1" 200 OK
+INFO:     10.12.20.94:33362 - "GET /scan/19b1a56a-d112-40c7-8f62-f6482cf5072e HTTP/1.1" 200 OK
+INFO:     10.12.20.94:32820 - "GET /scan/19b1a56a-d112-40c7-8f62-f6482cf5072e HTTP/1.1" 200 OK
+2025-09-08 14:01:25,931 - __main__ - INFO - ============================================================
+2025-09-08 14:01:25,932 - __main__ - INFO - 🛡️  Security Testing Framework Starting
+2025-09-08 14:01:25,932 - __main__ - INFO - ============================================================
+2025-09-08 14:01:25,932 - __main__ - INFO - Application: Security Testing Framework
+2025-09-08 14:01:25,932 - __main__ - INFO - Host: 0.0.0.0
+2025-09-08 14:01:25,932 - __main__ - INFO - Port: 8000
+2025-09-08 14:01:25,932 - __main__ - INFO - ZAP Host: localhost:8080
+2025-09-08 14:01:25,932 - __main__ - INFO - Reports Directory: reports
+2025-09-08 14:01:25,932 - __main__ - INFO - Debug Mode: False
+2025-09-08 14:01:25,932 - __main__ - INFO - ============================================================
+
+╔══════════════════════════════════════════════════════════════════════════════╗
+║                          🛡️  SECURITY TESTING FRAMEWORK                      ║
+╠══════════════════════════════════════════════════════════════════════════════╣
+║                                                                              ║
+║  🌐 Web Interface: http://0.0.0.0:8000                                          ║
+║  📊 API Documentation: http://0.0.0.0:8000/docs                               ║
+║  🔧 ZAP Proxy: http://localhost:8080                                             ║
+║                                                                              ║
+║  🔍 Available Scanners:                                                      ║
+║    • OWASP ZAP - Web Application Security Scanner                           ║
+║    • Nuclei - Fast Vulnerability Scanner                                    ║
+║    • Nikto - Web Server Scanner                                             ║
+║                                                                              ║
+║  📋 OWASP Top 10 2021 Coverage:                                             ║
+║    • A01:2021-Broken Access Control                                         ║
+║    • A02:2021-Cryptographic Failures                                        ║
+║    • A03:2021-Injection                                                     ║
+║    • A04:2021-Insecure Design                                               ║
+║    • A05:2021-Security Misconfiguration                                     ║
+║    • A06:2021-Vulnerable and Outdated Components                            ║
+║    • A07:2021-Identification and Authentication Failures                    ║
+║    • A08:2021-Software and Data Integrity Failures                         ║
+║    • A09:2021-Security Logging and Monitoring Failures                     ║
+║    • A10:2021-Server-Side Request Forgery                                   ║
+║                                                                              ║
+║  🚀 Ready to secure your applications!                                      ║
+║                                                                              ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+    
+2025-09-08 14:01:25,985 - __main__ - INFO - 🚀 Starting web server...
+INFO:     10.12.20.94:36164 - "GET /scan/19b1a56a-d112-40c7-8f62-f6482cf5072e HTTP/1.1" 404 Not Found
+2025-09-08 14:01:29,937 - app.api.routes - INFO - Starting scan for https://httpbin.org/
+INFO:     10.12.20.94:36164 - "POST /api/scan HTTP/1.1" 200 OK
+2025-09-08 14:01:29,938 - app.core.orchestrator - INFO - Starting scan c7d9cef1-b879-4003-afa8-093ade6f6018 for https://httpbin.org/
+2025-09-08 14:01:30,072 - app.core.orchestrator - INFO - Completed zap scan for c7d9cef1-b879-4003-afa8-093ade6f6018
+2025-09-08 14:01:30,073 - app.scanners.nuclei_scanner - INFO - Starting Nuclei scan for https://httpbin.org/
+2025-09-08 14:01:30,239 - app.scanners.nuclei_scanner - INFO - Nuclei scan completed with no vulnerabilities found for https://httpbin.org/
+2025-09-08 14:01:30,239 - app.core.orchestrator - INFO - Completed nuclei scan for c7d9cef1-b879-4003-afa8-093ade6f6018
+2025-09-08 14:01:30,240 - app.scanners.nikto_scanner - INFO - Starting Nikto scan for https://httpbin.org/
+INFO:     10.12.20.94:57612 - "GET /api/scan/c7d9cef1-b879-4003-afa8-093ade6f6018 HTTP/1.1" 200 OK
+2025-09-08 14:02:54,636 - app.scanners.nikto_scanner - ERROR - XML parsing error: no element found: line 1, column 0
+2025-09-08 14:02:54,637 - app.scanners.nikto_scanner - INFO - Nikto scan completed with no vulnerabilities found for https://httpbin.org/
+2025-09-08 14:02:54,637 - app.core.orchestrator - INFO - Completed nikto scan for c7d9cef1-b879-4003-afa8-093ade6f6018
+2025-09-08 14:02:54,638 - app.core.orchestrator - INFO - Completed scan c7d9cef1-b879-4003-afa8-093ade6f6018
+2025-09-08 14:03:10,127 - __main__ - INFO - ============================================================
+2025-09-08 14:03:10,128 - __main__ - INFO - 🛡️  Security Testing Framework Starting
+2025-09-08 14:03:10,128 - __main__ - INFO - ============================================================
+2025-09-08 14:03:10,128 - __main__ - INFO - Application: Security Testing Framework
+2025-09-08 14:03:10,128 - __main__ - INFO - Host: 0.0.0.0
+2025-09-08 14:03:10,128 - __main__ - INFO - Port: 8000
+2025-09-08 14:03:10,128 - __main__ - INFO - ZAP Host: localhost:8080
+2025-09-08 14:03:10,128 - __main__ - INFO - Reports Directory: reports
+2025-09-08 14:03:10,128 - __main__ - INFO - Debug Mode: False
+2025-09-08 14:03:10,128 - __main__ - INFO - ============================================================
+
+╔══════════════════════════════════════════════════════════════════════════════╗
+║                          🛡️  SECURITY TESTING FRAMEWORK                      ║
+╠══════════════════════════════════════════════════════════════════════════════╣
+║                                                                              ║
+║  🌐 Web Interface: http://0.0.0.0:8000                                          ║
+║  📊 API Documentation: http://0.0.0.0:8000/docs                               ║
+║  🔧 ZAP Proxy: http://localhost:8080                                             ║
+║                                                                              ║
+║  🔍 Available Scanners:                                                      ║
+║    • OWASP ZAP - Web Application Security Scanner                           ║
+║    • Nuclei - Fast Vulnerability Scanner                                    ║
+║    • Nikto - Web Server Scanner                                             ║
+║                                                                              ║
+║  📋 OWASP Top 10 2021 Coverage:                                             ║
+║    • A01:2021-Broken Access Control                                         ║
+║    • A02:2021-Cryptographic Failures                                        ║
+║    • A03:2021-Injection                                                     ║
+║    • A04:2021-Insecure Design                                               ║
+║    • A05:2021-Security Misconfiguration                                     ║
+║    • A06:2021-Vulnerable and Outdated Components                            ║
+║    • A07:2021-Identification and Authentication Failures                    ║
+║    • A08:2021-Software and Data Integrity Failures                         ║
+║    • A09:2021-Security Logging and Monitoring Failures                     ║
+║    • A10:2021-Server-Side Request Forgery                                   ║
+║                                                                              ║
+║  🚀 Ready to secure your applications!                                      ║
+║                                                                              ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+    
+2025-09-08 14:03:10,162 - __main__ - INFO - 🚀 Starting web server...
+2025-09-08 14:03:14,336 - app.api.routes - INFO - Starting scan for https://httpbin.org/get
+INFO:     10.12.20.94:38634 - "POST /api/scan HTTP/1.1" 200 OK
+2025-09-08 14:03:14,337 - app.core.orchestrator - INFO - Starting scan 1efeef64-2c80-4506-8811-e955af9d9553 for https://httpbin.org/get
+2025-09-08 14:03:19,432 - app.scanners.zap_scanner - ERROR - Failed to initialize real scanning: HTTPConnectionPool(host='httpbin.org', port=80): Read timed out. (read timeout=5)
+2025-09-08 14:03:19,433 - app.core.orchestrator - INFO - Completed zap scan for 1efeef64-2c80-4506-8811-e955af9d9553
+2025-09-08 14:03:19,433 - app.scanners.nuclei_scanner - INFO - Starting Nuclei scan for https://httpbin.org/get
+2025-09-08 14:03:19,597 - app.scanners.nuclei_scanner - INFO - Nuclei scan completed with no vulnerabilities found for https://httpbin.org/get
+2025-09-08 14:03:19,598 - app.core.orchestrator - INFO - Completed nuclei scan for 1efeef64-2c80-4506-8811-e955af9d9553
+2025-09-08 14:03:19,598 - app.scanners.nikto_scanner - INFO - Starting Nikto scan for https://httpbin.org/get
+2025-09-08 14:04:19,600 - app.scanners.nikto_scanner - WARNING - Nikto scan timeout for https://httpbin.org/get
+2025-09-08 14:04:20,601 - app.core.orchestrator - INFO - Completed nikto scan for 1efeef64-2c80-4506-8811-e955af9d9553
+2025-09-08 14:04:20,602 - app.core.orchestrator - INFO - Completed scan 1efeef64-2c80-4506-8811-e955af9d9553
+INFO:     10.12.20.94:51008 - "GET /api/scan/1efeef64-2c80-4506-8811-e955af9d9553 HTTP/1.1" 200 OK

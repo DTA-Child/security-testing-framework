@@ -20,7 +20,12 @@ cd webapp/
 tar -xzf security-testing-framework-v2024.tar.gz
 cd webapp/
 docker-compose up -d
+
+# If you get "pydantic_settings" error, run:
+./docker-rebuild.sh
 ```
+
+> **⚠️ Docker Issue Fix**: If encountering `ModuleNotFoundError: pydantic_settings`, see [`DOCKER_FIX.md`](DOCKER_FIX.md)
 
 ### **Option 3: Manual Setup**
 ```bash
