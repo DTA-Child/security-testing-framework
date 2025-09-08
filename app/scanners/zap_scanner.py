@@ -150,22 +150,22 @@ class ZAPScanner(BaseScanner):
         """Map vulnerability to OWASP Top 10 category"""
         name_lower = vulnerability_name.lower()
         
-        # Simple mapping based on vulnerability names
+        # OWASP Top 10 2024 mapping based on vulnerability names
         if any(term in name_lower for term in ['sql injection', 'xss', 'script', 'injection']):
-            return "A03:2021-Injection"
+            return "A03:2024-Injection"
         elif any(term in name_lower for term in ['authentication', 'session', 'login']):
-            return "A07:2021-Identification and Authentication Failures"
+            return "A07:2024-Identification and Authentication Failures"
         elif any(term in name_lower for term in ['access control', 'authorization', 'privilege']):
-            return "A01:2021-Broken Access Control"
+            return "A01:2024-Broken Access Control"
         elif any(term in name_lower for term in ['crypto', 'ssl', 'tls', 'certificate']):
-            return "A02:2021-Cryptographic Failures"
+            return "A02:2024-Cryptographic Failures"
         elif any(term in name_lower for term in ['configuration', 'header', 'server']):
-            return "A05:2021-Security Misconfiguration"
+            return "A05:2024-Security Misconfiguration"
         elif any(term in name_lower for term in ['component', 'library', 'version']):
-            return "A06:2021-Vulnerable and Outdated Components"
+            return "A06:2024-Vulnerable and Outdated Components"
         elif any(term in name_lower for term in ['logging', 'monitoring']):
-            return "A09:2021-Security Logging and Monitoring Failures"
+            return "A09:2024-Security Logging and Monitoring Failures"
         elif any(term in name_lower for term in ['ssrf', 'request forgery']):
-            return "A10:2021-Server-Side Request Forgery"
+            return "A10:2024-Server-Side Request Forgery (SSRF)"
         else:
-            return "A04:2021-Insecure Design"  # Default category
+            return "A04:2024-Insecure Design"  # Default category

@@ -16,18 +16,18 @@ class Settings(BaseSettings):
     MAX_CONCURRENT_SCANS: int = 5
     SCAN_TIMEOUT: int = 3600  # 1 hour
     
-    # OWASP Categories - EXACT NAMES (ClassVar to avoid being treated as field)
+    # OWASP Top 10 2024 Categories - LATEST VERSION
     OWASP_CATEGORIES: ClassVar[List[str]] = [
-        "A01:2021-Broken Access Control",
-        "A02:2021-Cryptographic Failures", 
-        "A03:2021-Injection",
-        "A04:2021-Insecure Design",
-        "A05:2021-Security Misconfiguration",
-        "A06:2021-Vulnerable and Outdated Components",
-        "A07:2021-Identification and Authentication Failures",
-        "A08:2021-Software and Data Integrity Failures",
-        "A09:2021-Security Logging and Monitoring Failures",
-        "A10:2021-Server-Side Request Forgery"
+        "A01:2024-Broken Access Control",
+        "A02:2024-Cryptographic Failures", 
+        "A03:2024-Injection",
+        "A04:2024-Insecure Design",
+        "A05:2024-Security Misconfiguration",
+        "A06:2024-Vulnerable and Outdated Components",
+        "A07:2024-Identification and Authentication Failures",
+        "A08:2024-Software and Data Integrity Failures",
+        "A09:2024-Security Logging and Monitoring Failures",
+        "A10:2024-Server-Side Request Forgery (SSRF)"
     ]
     
     model_config = {

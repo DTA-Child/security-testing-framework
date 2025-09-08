@@ -296,25 +296,55 @@ class VulnerabilityAnalyzer:
     def _get_category_recommendations(self, category: str) -> List[str]:
         """Get specific recommendations for OWASP category"""
         recommendations_map = {
-            "A01:2021-Broken Access Control": [
-                "Implement proper access controls and authorization checks",
-                "Use principle of least privilege",
-                "Regular access control testing"
+            "A01:2024-Broken Access Control": [
+                "Implement Zero Trust architecture with proper access controls",
+                "Use principle of least privilege and role-based access control (RBAC)",
+                "Regular access control testing with automated tools"
             ],
-            "A02:2021-Cryptographic Failures": [
-                "Use strong encryption algorithms",
-                "Implement proper key management",
-                "Encrypt sensitive data in transit and at rest"
+            "A02:2024-Cryptographic Failures": [
+                "Use modern encryption algorithms (AES-256, RSA-4096+)",
+                "Implement proper cryptographic key management and rotation",
+                "Encrypt sensitive data in transit (TLS 1.3+) and at rest"
             ],
-            "A03:2021-Injection": [
-                "Use parameterized queries and prepared statements",
-                "Implement input validation and sanitization",
-                "Use allowlists for input validation"
+            "A03:2024-Injection": [
+                "Use parameterized queries, prepared statements, and ORM frameworks", 
+                "Implement comprehensive input validation and output encoding",
+                "Deploy Web Application Firewalls (WAF) with injection protection"
             ],
-            "A05:2021-Security Misconfiguration": [
-                "Implement security hardening guidelines",
-                "Regular security configuration reviews",
-                "Disable unnecessary features and services"
+            "A04:2024-Insecure Design": [
+                "Implement secure-by-design principles in development lifecycle",
+                "Conduct regular threat modeling and security architecture reviews",
+                "Use established security design patterns and frameworks"
+            ],
+            "A05:2024-Security Misconfiguration": [
+                "Implement Infrastructure as Code (IaC) with security templates",
+                "Regular automated security configuration scanning",
+                "Disable unnecessary features, services, and default accounts"
+            ],
+            "A06:2024-Vulnerable and Outdated Components": [
+                "Implement automated dependency scanning in CI/CD pipeline", 
+                "Maintain software bill of materials (SBOM)",
+                "Regular patching and component lifecycle management"
+            ],
+            "A07:2024-Identification and Authentication Failures": [
+                "Implement multi-factor authentication (MFA) everywhere",
+                "Use modern authentication protocols (OAuth 2.1, OpenID Connect)",
+                "Deploy adaptive authentication and session management"
+            ],
+            "A08:2024-Software and Data Integrity Failures": [
+                "Implement digital signatures for software updates",
+                "Use secure CI/CD pipelines with integrity checks",
+                "Deploy supply chain security measures"
+            ],
+            "A09:2024-Security Logging and Monitoring Failures": [
+                "Implement comprehensive security monitoring (SIEM/SOAR)",
+                "Deploy real-time threat detection and automated response",
+                "Ensure proper log retention and forensic capabilities"
+            ],
+            "A10:2024-Server-Side Request Forgery (SSRF)": [
+                "Implement strict input validation for URLs and network requests",
+                "Use allowlists for external service communications",
+                "Deploy network segmentation and egress filtering"
             ]
         }
         

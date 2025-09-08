@@ -35,35 +35,63 @@ class MockZAPHandler(BaseHTTPRequestHandler):
             self.send_response(200)
             self.send_header('Content-type', 'application/json')
             self.end_headers()
-            # Mock vulnerability data
+            # Mock vulnerability data - OWASP Top 10 2024
             response = {'alerts': [
                 {
                     'pluginId': '40012',
                     'name': 'Cross Site Scripting (Reflected)',
-                    'description': 'Cross-site Scripting (XSS) is an attack technique that involves echoing attacker-supplied code into a user\'s browser instance.',
+                    'description': 'Cross-site Scripting (XSS) is an attack technique that involves echoing attacker-supplied code into a user\'s browser instance. Modern XSS attacks can bypass CSP and utilize DOM manipulation.',
                     'risk': 'High',
-                    'confidence': 'Medium',
+                    'confidence': 'High',
                     'url': 'https://example.com/search?q=<script>alert(1)</script>',
                     'param': 'q',
                     'evidence': '<script>alert(1)</script>',
-                    'solution': 'Validate all input and encode all output.',
-                    'reference': 'https://owasp.org/www-project-top-ten/2017/A7_2017-Cross-Site_Scripting_(XSS).html',
+                    'solution': 'Implement Content Security Policy (CSP), validate all input and encode all output using context-aware encoding.',
+                    'reference': 'https://owasp.org/Top10/A03_2024-Injection/',
                     'cweid': '79',
                     'wascid': '8'
                 },
                 {
                     'pluginId': '40018',
                     'name': 'SQL Injection',
-                    'description': 'SQL injection may be possible.',
+                    'description': 'SQL injection vulnerability allows attackers to interfere with database queries. This can lead to data theft, corruption, or unauthorized access.',
                     'risk': 'High',
-                    'confidence': 'Medium',
+                    'confidence': 'High',
                     'url': 'https://example.com/user?id=1\'',
                     'param': 'id',
                     'evidence': 'MySQL error: You have an error in your SQL syntax',
-                    'solution': 'Use parameterized queries.',
-                    'reference': 'https://owasp.org/www-project-top-ten/2017/A1_2017-Injection.html',
+                    'solution': 'Use parameterized queries/prepared statements and input validation. Implement least privilege database access.',
+                    'reference': 'https://owasp.org/Top10/A03_2024-Injection/',
                     'cweid': '89',
                     'wascid': '19'
+                },
+                {
+                    'pluginId': '10021',
+                    'name': 'X-Content-Type-Options Header Missing',
+                    'description': 'The Anti-MIME-Sniffing header X-Content-Type-Options was not set to nosniff. This allows older versions of Internet Explorer and Chrome to perform MIME-sniffing.',
+                    'risk': 'Low',
+                    'confidence': 'Medium',
+                    'url': 'https://example.com/',
+                    'param': '',
+                    'evidence': '',
+                    'solution': 'Ensure that the application/web server sets the Content-Type header appropriately, and that it sets the X-Content-Type-Options header to nosniff.',
+                    'reference': 'https://owasp.org/Top10/A05_2024-Security_Misconfiguration/',
+                    'cweid': '693',
+                    'wascid': '15'
+                },
+                {
+                    'pluginId': '10035',
+                    'name': 'Strict-Transport-Security Header Not Set',
+                    'description': 'HTTP Strict Transport Security (HSTS) is a web security policy mechanism that helps protect websites against protocol downgrade attacks and cookie hijacking.',
+                    'risk': 'Low',
+                    'confidence': 'High',
+                    'url': 'https://example.com/',
+                    'param': '',
+                    'evidence': '',
+                    'solution': 'Ensure that your web server, application server, load balancer, etc. is configured to enforce Strict-Transport-Security.',
+                    'reference': 'https://owasp.org/Top10/A02_2024-Cryptographic_Failures/',
+                    'cweid': '319',
+                    'wascid': '15'
                 }
             ]}
             self.wfile.write(json.dumps(response).encode())

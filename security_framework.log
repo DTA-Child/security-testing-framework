@@ -1135,3 +1135,43 @@
 2025-09-08 13:27:07,974 - __main__ - INFO - Debug Mode: False
 2025-09-08 13:27:07,974 - __main__ - INFO - ============================================================
 2025-09-08 13:27:08,018 - __main__ - INFO - 🚀 Starting web server...
+2025-09-08 13:27:57,865 - app.core.orchestrator - INFO - Starting scan f0b0f0ca-67e8-4475-aa90-d9387c9249b3 for http://testphp.vulnweb.com/
+2025-09-08 13:27:57,870 - app.scanners.zap_scanner - INFO - ZAP connection established
+2025-09-08 13:27:57,870 - app.scanners.zap_scanner - INFO - Starting ZAP scan for http://testphp.vulnweb.com/
+2025-09-08 13:27:57,873 - app.scanners.zap_scanner - INFO - Spider scan started with ID: True
+2025-09-08 13:27:57,875 - app.scanners.zap_scanner - INFO - Spider scan completed
+2025-09-08 13:27:57,877 - app.scanners.zap_scanner - INFO - Active scan started with ID: True
+2025-09-08 13:27:57,879 - app.scanners.zap_scanner - INFO - Active scan completed
+2025-09-08 13:27:57,884 - app.core.orchestrator - INFO - Completed zap scan for f0b0f0ca-67e8-4475-aa90-d9387c9249b3
+2025-09-08 13:27:57,884 - app.scanners.nuclei_scanner - INFO - Starting Nuclei scan for http://testphp.vulnweb.com/
+2025-09-08 13:27:57,885 - app.scanners.nuclei_scanner - ERROR - Nuclei binary not found. Please install Nuclei.
+2025-09-08 13:27:57,885 - app.core.orchestrator - INFO - Completed nuclei scan for f0b0f0ca-67e8-4475-aa90-d9387c9249b3
+2025-09-08 13:27:57,885 - app.scanners.nikto_scanner - INFO - Starting Nikto scan for http://testphp.vulnweb.com/
+2025-09-08 13:27:57,886 - app.scanners.nikto_scanner - ERROR - Nikto binary not found. Please install Nikto.
+2025-09-08 13:27:57,886 - app.core.orchestrator - INFO - Completed nikto scan for f0b0f0ca-67e8-4475-aa90-d9387c9249b3
+2025-09-08 13:27:57,886 - app.core.orchestrator - INFO - Completed scan f0b0f0ca-67e8-4475-aa90-d9387c9249b3
+2025-09-08 13:28:15,098 - app.core.orchestrator - INFO - Starting scan 985c285a-5ccd-4f59-b485-14dfd0672374 for https://example.com/
+2025-09-08 13:28:15,098 - app.scanners.zap_scanner - INFO - Starting ZAP scan for https://example.com/
+2025-09-08 13:28:15,101 - app.scanners.zap_scanner - INFO - Spider scan started with ID: True
+2025-09-08 13:28:15,104 - app.scanners.zap_scanner - INFO - Spider scan completed
+2025-09-08 13:28:15,106 - app.scanners.zap_scanner - INFO - Active scan started with ID: True
+2025-09-08 13:28:15,108 - app.scanners.zap_scanner - INFO - Active scan completed
+2025-09-08 13:28:15,115 - app.core.orchestrator - INFO - Completed zap scan for 985c285a-5ccd-4f59-b485-14dfd0672374
+2025-09-08 13:28:15,115 - app.scanners.nuclei_scanner - INFO - Starting Nuclei scan for https://example.com/
+2025-09-08 13:28:15,116 - app.scanners.nuclei_scanner - ERROR - Nuclei binary not found. Please install Nuclei.
+2025-09-08 13:28:15,117 - app.core.orchestrator - INFO - Completed nuclei scan for 985c285a-5ccd-4f59-b485-14dfd0672374
+2025-09-08 13:28:15,117 - app.scanners.nikto_scanner - INFO - Starting Nikto scan for https://example.com/
+2025-09-08 13:28:15,118 - app.scanners.nikto_scanner - ERROR - Nikto binary not found. Please install Nikto.
+2025-09-08 13:28:15,118 - app.core.orchestrator - INFO - Completed nikto scan for 985c285a-5ccd-4f59-b485-14dfd0672374
+2025-09-08 13:28:15,118 - app.core.orchestrator - INFO - Completed scan 985c285a-5ccd-4f59-b485-14dfd0672374
+2025-09-08 13:34:14,704 - __main__ - INFO - ============================================================
+2025-09-08 13:34:14,704 - __main__ - INFO - 🛡️  Security Testing Framework Starting
+2025-09-08 13:34:14,704 - __main__ - INFO - ============================================================
+2025-09-08 13:34:14,705 - __main__ - INFO - Application: Security Testing Framework
+2025-09-08 13:34:14,705 - __main__ - INFO - Host: 0.0.0.0
+2025-09-08 13:34:14,705 - __main__ - INFO - Port: 8000
+2025-09-08 13:34:14,705 - __main__ - INFO - ZAP Host: localhost:8080
+2025-09-08 13:34:14,705 - __main__ - INFO - Reports Directory: reports
+2025-09-08 13:34:14,705 - __main__ - INFO - Debug Mode: False
+2025-09-08 13:34:14,705 - __main__ - INFO - ============================================================
+2025-09-08 13:34:14,743 - __main__ - INFO - 🚀 Starting web server...
