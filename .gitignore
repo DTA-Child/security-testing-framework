@@ -1,1 +1,57 @@
+# Virtual Environments
 test_env/
+venv/
+env/
+.env
+
+# Python Cache Files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Log Files
+*.log
+logs/*.log
+*.log.*
+
+# Process Files
+*.pid
+*.sock
+supervisord.pid
+supervisor.sock
+
+# Temporary Files
+*.tmp
+*.temp
+/tmp/
+temp/
+
+# Archive Files
+*.tar.gz
+*.zip
+*.rar
+
+# IDE Files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# Reports Directory (keep structure, ignore contents)
+reports/*.html
+reports/*.pdf
+reports/*.json
+
+# Node modules (if any)
+node_modules/
+
+# Coverage reports
+htmlcov/
+.coverage
+.pytest_cache/
