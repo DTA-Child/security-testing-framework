@@ -4,3 +4,10 @@
 2025-09-08 13:18:47,163 INFO supervisord started with pid 3625
 2025-09-08 13:18:48,211 INFO spawned: 'security-framework' with pid 3627
 2025-09-08 13:18:49,214 INFO success: security-framework entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-09-08 13:27:00,395 INFO waiting for security-framework to stop
+2025-09-08 13:27:02,395 INFO waiting for security-framework to stop
+2025-09-08 13:27:04,395 INFO waiting for security-framework to stop
+2025-09-08 13:27:06,395 INFO waiting for security-framework to stop
+2025-09-08 13:27:06,639 WARN stopped: security-framework (terminated by SIGTERM)
+2025-09-08 13:27:06,643 INFO spawned: 'security-framework' with pid 4737
+2025-09-08 13:27:07,645 INFO success: security-framework entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
