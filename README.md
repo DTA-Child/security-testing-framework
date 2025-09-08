@@ -4,12 +4,14 @@ A comprehensive web security scanner that combines multiple tools (ZAP, Nuclei, 
 
 ## Features
 
-- **Real Vulnerability Scanning**: No fake data, only genuine security findings
-- **Multiple Scanners**: ZAP, Nuclei, and Nikto integration
-- **OWASP Top 10 2024**: Latest security standards
-- **REST API**: Complete API with FastAPI
-- **Docker Support**: Easy deployment with Docker
-- **Real-time Results**: Live scan progress tracking
+- **🌐 Professional Web UI**: Modern, responsive interface - no CLI needed!
+- **🔍 Real Vulnerability Scanning**: No fake data, only genuine security findings
+- **⚡ Multiple Scanners**: ZAP, Nuclei, and Nikto integration
+- **🏆 OWASP Top 10 2024**: Latest security standards compliance
+- **🚀 REST API**: Complete API with FastAPI
+- **🐳 Docker Support**: Easy deployment with Docker
+- **📊 Real-time Progress**: Live scan monitoring with auto-refresh
+- **📱 Mobile Friendly**: Works perfectly on all devices
 
 ## Quick Start
 
@@ -41,24 +43,32 @@ pip install -r requirements.txt
 python main.py
 ```
 
-## API Usage
+## Usage
 
-### Start a Scan
+### 🌐 Web Interface (Recommended)
 
+1. **Access the Web UI**: Open `http://localhost:8000` in your browser
+2. **Enter Target URL**: Input the website you want to scan
+3. **Select Scanners**: Choose ZAP, Nuclei, Nikto (or all)
+4. **Start Scan**: Click "Start Security Scan"
+5. **Monitor Progress**: Watch real-time progress updates
+6. **View Results**: Analyze detailed vulnerability reports
+
+### 📡 API Usage
+
+#### Start a Scan
 ```bash
 curl -X POST "http://localhost:8000/api/scan" \
   -H "Content-Type: application/json" \
   -d '{"target_url": "https://example.com"}'
 ```
 
-### Check Scan Status
-
+#### Check Scan Status
 ```bash
 curl "http://localhost:8000/api/scan/{scan_id}"
 ```
 
-### Get All Scans
-
+#### Get All Scans
 ```bash
 curl "http://localhost:8000/api/scans"
 ```
