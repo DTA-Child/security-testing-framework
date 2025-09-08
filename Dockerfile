@@ -40,10 +40,10 @@ RUN git clone https://github.com/sullo/nikto.git /opt/nikto \
     && chmod +x /usr/local/bin/nikto
 
 # Copy requirements first for better caching
-COPY requirements.txt .
+COPY requirements-docker.txt .
 
-# Install Python dependencies
-RUN pip install --no-cache-dir -r requirements.txt
+# Install Python dependencies with fixed versions
+RUN pip install --no-cache-dir -r requirements-docker.txt
 
 # Copy application code
 COPY . .
