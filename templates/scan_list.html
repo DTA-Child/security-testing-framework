@@ -1,0 +1,217 @@
+{% extends "base.html" %}
+
+{% block title %}All Scans - Security Testing Framework{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12">
+        <!-- Header -->
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h2>
+                <i class="bi bi-list-ul"></i>
+                All Scans
+            </h2>
+            <a href="/" class="btn btn-primary">
+                <i class="bi bi-plus-circle"></i>
+                New Scan
+            </a>
+        </div>
+
+        <!-- Scans Table -->
+        {% if scans %}
+        <div class="card">
+            <div class="card-header">
+                <h5 class="mb-0">
+                    <i class="bi bi-table"></i>
+                    Scan History
+                    <span class="badge bg-secondary ms-2">{{ scans|length }}</span>
+                </h5>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Target URL</th>
+                                <th>Status</th>
+                                <th>Progress</th>
+                                <th>Scanners</th>
+                                <th>Vulnerabilities</th>
+                                <th>Created</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for scan in scans %}
+                            <tr>
+                                <td>
+                                    <a href="{{ scan.target_url }}" target="_blank" class="text-decoration-none">
+                                        {{ scan.target_url[:60] }}{% if scan.target_url|length > 60 %}...{% endif %}
+                                        <i class="bi bi-box-arrow-up-right small"></i>
+                                    </a>
+                                </td>
+                                <td>
+                                    <span class="badge bg-{{ 'success' if scan.status == 'completed' else 'warning' if scan.status == 'running' else 'danger' if scan.status == 'failed' else 'secondary' }}">
+                                        {{ scan.status.upper() }}
+                                    </span>
+                                </td>
+                                <td>
+                                    {% if scan.status == 'running' %}
+                                    <div class="progress" style="width: 100px; height: 20px;">
+                                        <div class="progress-bar progress-bar-striped progress-bar-animated" 
+                                             role="progressbar" style="width: {{ scan.progress or 0 }}%">
+                                        </div>
+                                    </div>
+                                    <small class="text-muted">{{ scan.progress or 0 }}%</small>
+                                    {% else %}
+                                    {{ scan.progress or 0 }}%
+                                    {% endif %}
+                                </td>
+                                <td>
+                                    {% for scanner in scan.scan_types %}
+                                    <span class="badge bg-light text-dark me-1">
+                                        {% if scanner == 'zap' %}ZAP
+                                        {% elif scanner == 'nuclei' %}Nuclei
+                                        {% elif scanner == 'nikto' %}Nikto
+                                        {% endif %}
+                                    </span>
+                                    {% endfor %}
+                                </td>
+                                <td>
+                                    {% if scan.results %}
+                                    {% set total_vulns = 0 %}
+                                    {% for scanner_name, result in scan.results.items() %}
+                                        {% if result.summary %}
+                                            {% set total_vulns = total_vulns + (result.summary.total or 0) %}
+                                        {% endif %}
+                                    {% endfor %}
+                                    
+                                    {% if total_vulns > 0 %}
+                                    <span class="badge bg-danger">{{ total_vulns }}</span>
+                                    
+                                    <!-- Severity breakdown -->
+                                    {% set high_vulns = 0 %}
+                                    {% set medium_vulns = 0 %}
+                                    {% for scanner_name, result in scan.results.items() %}
+                                        {% if result.summary %}
+                                            {% set high_vulns = high_vulns + (result.summary.high or 0) %}
+                                            {% set medium_vulns = medium_vulns + (result.summary.medium or 0) %}
+                                        {% endif %}
+                                    {% endfor %}
+                                    
+                                    <br>
+                                    <small class="text-muted">
+                                        {% if high_vulns > 0 %}<span class="text-danger">{{ high_vulns }}H</span>{% endif %}
+                                        {% if medium_vulns > 0 %}<span class="text-warning">{{ medium_vulns }}M</span>{% endif %}
+                                    </small>
+                                    {% else %}
+                                    <span class="badge bg-success">0</span>
+                                    {% endif %}
+                                    {% elif scan.status == 'running' %}
+                                    <span class="text-muted">
+                                        <i class="bi bi-hourglass-split"></i>
+                                    </span>
+                                    {% else %}
+                                    <span class="text-muted">N/A</span>
+                                    {% endif %}
+                                </td>
+                                <td>
+                                    <small class="text-muted">
+                                        {{ scan.created_at[:19].replace('T', ' ') }}
+                                    </small>
+                                </td>
+                                <td>
+                                    <div class="btn-group" role="group">
+                                        <a href="/scan/{{ scan.id }}" class="btn btn-sm btn-outline-primary">
+                                            <i class="bi bi-eye"></i>
+                                        </a>
+                                        {% if scan.status == 'running' %}
+                                        <button class="btn btn-sm btn-outline-secondary" disabled>
+                                            <i class="bi bi-hourglass-split"></i>
+                                        </button>
+                                        {% endif %}
+                                    </div>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Summary Stats -->
+        <div class="row mt-4">
+            <div class="col-md-3">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <h5 class="text-primary">{{ scans|length }}</h5>
+                        <small class="text-muted">Total Scans</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card text-center">
+                    <div class="card-body">
+                        {% set completed_scans = scans|selectattr('status', 'equalto', 'completed')|list %}
+                        <h5 class="text-success">{{ completed_scans|length }}</h5>
+                        <small class="text-muted">Completed</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card text-center">
+                    <div class="card-body">
+                        {% set running_scans = scans|selectattr('status', 'equalto', 'running')|list %}
+                        <h5 class="text-warning">{{ running_scans|length }}</h5>
+                        <small class="text-muted">Running</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card text-center">
+                    <div class="card-body">
+                        {% set total_vulns = 0 %}
+                        {% for scan in scans %}
+                            {% if scan.results %}
+                                {% for scanner_name, result in scan.results.items() %}
+                                    {% if result.summary %}
+                                        {% set total_vulns = total_vulns + (result.summary.total or 0) %}
+                                    {% endif %}
+                                {% endfor %}
+                            {% endif %}
+                        {% endfor %}
+                        <h5 class="text-danger">{{ total_vulns }}</h5>
+                        <small class="text-muted">Total Vulnerabilities</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {% else %}
+        <!-- Empty State -->
+        <div class="text-center my-5">
+            <i class="bi bi-inbox display-1 text-muted"></i>
+            <h4 class="mt-3">No Scans Yet</h4>
+            <p class="text-muted">You haven't run any security scans yet. Start your first scan!</p>
+            <a href="/" class="btn btn-primary">
+                <i class="bi bi-plus-circle"></i>
+                Start First Scan
+            </a>
+        </div>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+// Auto-refresh if there are running scans
+const runningScans = {{ scans|selectattr('status', 'equalto', 'running')|list|length }};
+if (runningScans > 0) {
+    setInterval(() => {
+        location.reload();
+    }, 10000); // Refresh every 10 seconds
+}
+</script>
+{% endblock %}

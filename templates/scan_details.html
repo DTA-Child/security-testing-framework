@@ -1,0 +1,263 @@
+{% extends "base.html" %}
+
+{% block title %}Scan Results - Security Testing Framework{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12">
+        <!-- Header -->
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h2>
+                <i class="bi bi-clipboard-data"></i>
+                Scan Results
+            </h2>
+            <div>
+                <a href="/scans" class="btn btn-outline-secondary">
+                    <i class="bi bi-arrow-left"></i> Back to Scans
+                </a>
+                <a href="/" class="btn btn-primary">
+                    <i class="bi bi-plus-circle"></i> New Scan
+                </a>
+            </div>
+        </div>
+
+        <!-- Scan Overview -->
+        <div class="card mb-4">
+            <div class="card-header">
+                <h5 class="mb-0">
+                    <i class="bi bi-info-circle"></i>
+                    Scan Overview
+                </h5>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-3">
+                        <strong>Target URL:</strong><br>
+                        <a href="{{ scan.target_url }}" target="_blank" class="text-decoration-none">
+                            {{ scan.target_url }}
+                            <i class="bi bi-box-arrow-up-right"></i>
+                        </a>
+                    </div>
+                    <div class="col-md-2">
+                        <strong>Status:</strong><br>
+                        <span class="badge bg-{{ 'success' if scan.status == 'completed' else 'warning' if scan.status == 'running' else 'danger' if scan.status == 'failed' else 'secondary' }}">
+                            {{ scan.status.upper() }}
+                        </span>
+                    </div>
+                    <div class="col-md-2">
+                        <strong>Progress:</strong><br>
+                        {{ scan.progress or 0 }}%
+                    </div>
+                    <div class="col-md-3">
+                        <strong>Created:</strong><br>
+                        {{ scan.created_at[:19].replace('T', ' ') }}
+                    </div>
+                    <div class="col-md-2">
+                        <strong>Scan ID:</strong><br>
+                        <code class="small">{{ scan.id[:8] }}...</code>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Progress Bar (if running) -->
+        {% if scan.status == 'running' %}
+        <div class="card mb-4">
+            <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                    <span>Scan Progress</span>
+                    <span>{{ scan.progress or 0 }}%</span>
+                </div>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated" 
+                         role="progressbar" style="width: {{ scan.progress or 0 }}%">
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+
+        <!-- Errors (if any) -->
+        {% if scan.errors %}
+        <div class="alert alert-warning">
+            <h6><i class="bi bi-exclamation-triangle"></i> Scan Warnings</h6>
+            <ul class="mb-0">
+                {% for error in scan.errors %}
+                <li>{{ error }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endif %}
+
+        <!-- Results Summary -->
+        {% if scan.results %}
+        <div class="row mb-4">
+            {% for scanner_name, result in scan.results.items() %}
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-header">
+                        <h6 class="mb-0">
+                            {% if scanner_name == 'zap' %}
+                            <i class="bi bi-shield-check"></i> ZAP Scanner
+                            {% elif scanner_name == 'nuclei' %}
+                            <i class="bi bi-bug"></i> Nuclei Scanner
+                            {% elif scanner_name == 'nikto' %}
+                            <i class="bi bi-search"></i> Nikto Scanner
+                            {% endif %}
+                        </h6>
+                    </div>
+                    <div class="card-body">
+                        {% if result.error %}
+                        <div class="text-danger">
+                            <i class="bi bi-exclamation-circle"></i>
+                            Error: {{ result.error }}
+                        </div>
+                        {% elif result.summary %}
+                        <div class="row text-center">
+                            <div class="col-6">
+                                <div class="h4 text-primary">{{ result.summary.total or 0 }}</div>
+                                <small class="text-muted">Total</small>
+                            </div>
+                            <div class="col-6">
+                                <div class="h4 text-danger">{{ result.summary.high or 0 }}</div>
+                                <small class="text-muted">High</small>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row text-center small">
+                            <div class="col-4">
+                                <div class="text-warning">{{ result.summary.medium or 0 }}</div>
+                                <small>Medium</small>
+                            </div>
+                            <div class="col-4">
+                                <div class="text-info">{{ result.summary.low or 0 }}</div>
+                                <small>Low</small>
+                            </div>
+                            <div class="col-4">
+                                <div class="text-secondary">{{ result.summary.info or 0 }}</div>
+                                <small>Info</small>
+                            </div>
+                        </div>
+                        {% else %}
+                        <div class="text-muted">
+                            <i class="bi bi-hourglass-split"></i>
+                            Scanning...
+                        </div>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+        <!-- Detailed Results -->
+        {% for scanner_name, result in scan.results.items() %}
+        {% if result.vulnerabilities %}
+        <div class="card mb-4">
+            <div class="card-header">
+                <h5 class="mb-0">
+                    {% if scanner_name == 'zap' %}
+                    <i class="bi bi-shield-check"></i> ZAP Scanner Results
+                    {% elif scanner_name == 'nuclei' %}
+                    <i class="bi bi-bug"></i> Nuclei Scanner Results
+                    {% elif scanner_name == 'nikto' %}
+                    <i class="bi bi-search"></i> Nikto Scanner Results
+                    {% endif %}
+                    <span class="badge bg-secondary ms-2">{{ result.vulnerabilities|length }} findings</span>
+                </h5>
+            </div>
+            <div class="card-body">
+                {% if result.vulnerabilities %}
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Vulnerability</th>
+                                <th>Severity</th>
+                                <th>OWASP Category</th>
+                                <th>URL</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for vuln in result.vulnerabilities %}
+                            <tr>
+                                <td>
+                                    <strong>{{ vuln.name }}</strong>
+                                    {% if vuln.description %}
+                                    <br><small class="text-muted">{{ vuln.description[:100] }}{% if vuln.description|length > 100 %}...{% endif %}</small>
+                                    {% endif %}
+                                </td>
+                                <td>
+                                    <span class="badge bg-{{ 'danger' if vuln.severity == 'high' else 'warning' if vuln.severity == 'medium' else 'info' if vuln.severity == 'low' else 'secondary' }}">
+                                        {{ vuln.severity.upper() }}
+                                    </span>
+                                </td>
+                                <td>
+                                    <small>{{ vuln.owasp_category or 'N/A' }}</small>
+                                </td>
+                                <td>
+                                    {% if vuln.url %}
+                                    <small class="text-muted">{{ vuln.url[:50] }}{% if vuln.url|length > 50 %}...{% endif %}</small>
+                                    {% else %}
+                                    <small class="text-muted">N/A</small>
+                                    {% endif %}
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+                {% else %}
+                <div class="text-center text-muted">
+                    <i class="bi bi-check-circle display-6"></i>
+                    <p>No vulnerabilities found by this scanner.</p>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+        {% endif %}
+        {% endfor %}
+
+        <!-- No Results Yet -->
+        {% if not scan.results and scan.status == 'running' %}
+        <div class="text-center my-5">
+            <i class="bi bi-hourglass-split display-1 text-muted"></i>
+            <h4 class="mt-3">Scan in Progress</h4>
+            <p class="text-muted">Please wait while we analyze the target...</p>
+            <div class="spinner-border text-primary" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+        </div>
+        {% endif %}
+
+        {% if not scan.results and scan.status == 'completed' %}
+        <div class="text-center my-5">
+            <i class="bi bi-check-circle display-1 text-success"></i>
+            <h4 class="mt-3">Scan Complete</h4>
+            <p class="text-muted">No vulnerabilities detected. The target appears to be secure!</p>
+        </div>
+        {% endif %}
+
+        {% else %}
+        <div class="text-center my-5">
+            <i class="bi bi-hourglass-split display-1 text-muted"></i>
+            <h4 class="mt-3">Scan Starting</h4>
+            <p class="text-muted">Initializing security scanners...</p>
+        </div>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+{% if scan.status == 'running' %}
+<script>
+// Auto-refresh if scan is running
+setInterval(() => {
+    if ('{{ scan.status }}' === 'running') {
+        location.reload();
+    }
+}, 5000);
+</script>
+{% endif %}
+{% endblock %}

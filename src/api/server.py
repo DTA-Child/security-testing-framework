@@ -5,6 +5,7 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.cors import CORSMiddleware
 
 from src.api.routes import router
+from src.web.routes import router as web_router
 from src.core.config import settings
 
 def create_app() -> FastAPI:
@@ -29,6 +30,9 @@ def create_app() -> FastAPI:
     
     # Include API routes
     app.include_router(router, prefix="/api")
+    
+    # Include Web UI routes  
+    app.include_router(web_router)
     
     # Static files
     try:

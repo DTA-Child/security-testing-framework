@@ -1,0 +1,177 @@
+{% extends "base.html" %}
+
+{% block title %}Home - Security Testing Framework{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-lg-8 mx-auto">
+        <!-- Header -->
+        <div class="text-center mb-5">
+            <h1 class="display-4">
+                <i class="bi bi-shield-check text-primary"></i>
+                Security Testing Framework
+            </h1>
+            <p class="lead">
+                Comprehensive web security scanning with ZAP, Nuclei, and Nikto
+            </p>
+        </div>
+
+        <!-- Quick Stats -->
+        <div class="row mb-5">
+            <div class="col-md-4">
+                <div class="card text-center h-100">
+                    <div class="card-body">
+                        <i class="bi bi-bug display-4 text-danger"></i>
+                        <h5 class="card-title">Real Scanning</h5>
+                        <p class="card-text">100% genuine vulnerability detection</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card text-center h-100">
+                    <div class="card-body">
+                        <i class="bi bi-layers display-4 text-warning"></i>
+                        <h5 class="card-title">3 Scanners</h5>
+                        <p class="card-text">ZAP, Nuclei, and Nikto integration</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card text-center h-100">
+                    <div class="card-body">
+                        <i class="bi bi-award display-4 text-success"></i>
+                        <h5 class="card-title">OWASP 2024</h5>
+                        <p class="card-text">Top 10 compliant categorization</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scan Form -->
+        <div class="card shadow">
+            <div class="card-header bg-primary text-white">
+                <h5 class="mb-0">
+                    <i class="bi bi-search"></i>
+                    Start New Security Scan
+                </h5>
+            </div>
+            <div class="card-body">
+                <form method="post" action="/scan" id="scanForm">
+                    <div class="mb-3">
+                        <label for="target_url" class="form-label">Target URL</label>
+                        <input type="url" class="form-control" id="target_url" name="target_url" 
+                               placeholder="https://example.com" required>
+                        <div class="form-text">
+                            Enter the complete URL including http:// or https://
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Select Scanners</label>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="scan_zap" 
+                                           name="scan_zap" value="true" checked>
+                                    <label class="form-check-label" for="scan_zap">
+                                        <strong>ZAP Scanner</strong><br>
+                                        <small class="text-muted">HTTP headers, SSL, info disclosure</small>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="scan_nuclei" 
+                                           name="scan_nuclei" value="true" checked>
+                                    <label class="form-check-label" for="scan_nuclei">
+                                        <strong>Nuclei Scanner</strong><br>
+                                        <small class="text-muted">Template-based vulnerability detection</small>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="scan_nikto" 
+                                           name="scan_nikto" value="true" checked>
+                                    <label class="form-check-label" for="scan_nikto">
+                                        <strong>Nikto Scanner</strong><br>
+                                        <small class="text-muted">Web server vulnerability scanning</small>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="d-grid">
+                        <button type="submit" class="btn btn-primary btn-lg" id="scanBtn">
+                            <i class="bi bi-play-circle"></i>
+                            Start Security Scan
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Recent Scans Preview -->
+        <div class="mt-5">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <h4>Recent Scans</h4>
+                <a href="/scans" class="btn btn-outline-primary">View All</a>
+            </div>
+            
+            <div id="recentScans">
+                <div class="text-center text-muted">
+                    <i class="bi bi-clock-history display-6"></i>
+                    <p>No recent scans. Start your first scan above!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+document.getElementById('scanForm').addEventListener('submit', function() {
+    const btn = document.getElementById('scanBtn');
+    btn.innerHTML = '<i class="bi bi-hourglass-split"></i> Starting Scan...';
+    btn.disabled = true;
+});
+
+// Load recent scans
+async function loadRecentScans() {
+    try {
+        const response = await fetch('/api/scans?limit=3');
+        const data = await response.json();
+        
+        const container = document.getElementById('recentScans');
+        if (data.scans && data.scans.length > 0) {
+            container.innerHTML = data.scans.map(scan => `
+                <div class="card mb-2">
+                    <div class="card-body py-2">
+                        <div class="row align-items-center">
+                            <div class="col-md-6">
+                                <small class="text-muted">${scan.target_url}</small>
+                            </div>
+                            <div class="col-md-3">
+                                <span class="badge bg-${scan.status === 'completed' ? 'success' : scan.status === 'running' ? 'warning' : 'secondary'}">
+                                    ${scan.status}
+                                </span>
+                            </div>
+                            <div class="col-md-3 text-end">
+                                <a href="/scan/${scan.id}" class="btn btn-sm btn-outline-primary">View</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+    } catch (error) {
+        console.log('No recent scans available');
+    }
+}
+
+// Load recent scans on page load
+loadRecentScans();
+</script>
+{% endblock %}
