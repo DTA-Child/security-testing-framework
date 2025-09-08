@@ -60,6 +60,35 @@
             </div>
         </div>
 
+        <!-- Report Generation (if completed) -->
+        {% if scan.status == 'completed' %}
+        <div class="card mb-4">
+            <div class="card-header">
+                <h5 class="mb-0">
+                    <i class="bi bi-file-earmark-text"></i>
+                    Download Reports
+                </h5>
+            </div>
+            <div class="card-body">
+                <p class="card-text">Generate and download comprehensive security reports in different formats:</p>
+                <div class="btn-group" role="group" aria-label="Report formats">
+                    <a href="/api/scan/{{ scan.id }}/report/html" 
+                       class="btn btn-outline-primary" target="_blank">
+                        <i class="bi bi-file-earmark-code"></i> HTML Report
+                    </a>
+                    <a href="/api/scan/{{ scan.id }}/report/pdf" 
+                       class="btn btn-outline-danger">
+                        <i class="bi bi-file-earmark-pdf"></i> PDF Report
+                    </a>
+                    <a href="/api/scan/{{ scan.id }}/report/json" 
+                       class="btn btn-outline-success">
+                        <i class="bi bi-file-earmark-code"></i> JSON Data
+                    </a>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+
         <!-- Progress Bar (if running) -->
         {% if scan.status == 'running' %}
         <div class="card mb-4">

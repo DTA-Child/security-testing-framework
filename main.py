@@ -18,20 +18,20 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
+# Create reports directory
+Path("reports").mkdir(exist_ok=True)
+
+# Create FastAPI app for uvicorn
+app = create_app()
+
 def main():
-    """Main application entry point"""
+    """Main application entry point for direct execution"""
     logger.info("🛡️  Security Testing Framework")
     logger.info("=" * 50)
     logger.info(f"Host: {settings.API_HOST}")
     logger.info(f"Port: {settings.API_PORT}")
     logger.info(f"Environment: {'Development' if settings.DEBUG else 'Production'}")
     logger.info("=" * 50)
-    
-    # Create reports directory
-    Path("reports").mkdir(exist_ok=True)
-    
-    # Create FastAPI app
-    app = create_app()
     
     # Start server
     uvicorn.run(
