@@ -1,8 +1,41 @@
 # 🛡️ Security Testing Framework
 
-> **Comprehensive Web Application Security Scanning Platform**
+> **Comprehensive Web Application Security Scanning Platform (OWASP Top 10 2024)**
 > 
 > Integrated security testing solution combining OWASP ZAP, Nuclei, and Nikto scanners with advanced reporting and analytics.
+
+## 🚀 **Quick Start**
+
+### **Option 1: Automated Setup (Linux/macOS)**
+```bash
+# Extract and run setup
+tar -xzf security-testing-framework-v2024.tar.gz
+cd webapp/
+./setup.sh
+```
+
+### **Option 2: Docker (All platforms)**
+```bash
+# Extract and start with Docker
+tar -xzf security-testing-framework-v2024.tar.gz
+cd webapp/
+docker-compose up -d
+```
+
+### **Option 3: Manual Setup**
+```bash
+# Basic setup
+pip install -r requirements.txt
+python start_mock_zap.py &  # Mock ZAP for testing
+python main.py              # Start application
+```
+
+**🌐 Access**: http://localhost:8000
+
+## 📖 **Full Documentation**
+- **📋 Installation Guide**: [`INSTALLATION.md`](INSTALLATION.md)
+- **🔧 API Documentation**: http://localhost:8000/docs
+- **🎯 Usage Examples**: See installation guide
 
 [![Python](https://img.shields.io/badge/Python-3.9+-blue.svg)](https://python.org)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.95.1-green.svg)](https://fastapi.tiangolo.com)
