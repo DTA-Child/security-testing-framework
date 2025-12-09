@@ -1,14 +1,26 @@
-FROM python:3.9-slim
+FROM python:3.9-slim-bookworm
 
 # Set working directory
 WORKDIR /app
 
-# Install system dependencies
+# Install system dependencies (bao gồm WeasyPrint dependencies)
 RUN apt-get update && apt-get install -y \
     wget \
     curl \
     git \
     unzip \
+    perl \
+    libnet-ssleay-perl \
+    # WeasyPrint dependencies - ĐẦY ĐỦ
+    libpango-1.0-0 \
+    libpangoft2-1.0-0 \
+    libpangocairo-1.0-0 \
+    libgdk-pixbuf-2.0-0 \
+    libcairo2 \
+    libffi8 \
+    libharfbuzz0b \
+    libfribidi0 \
+    fonts-dejavu \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
