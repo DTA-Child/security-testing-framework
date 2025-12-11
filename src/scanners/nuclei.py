@@ -56,25 +56,23 @@ class NucleiScanner(BaseScanner):
             
             # Build nuclei command with enhanced options
             cmd = [
-                'nuclei',
-                '-target', target_url,
-                '-json',
-                '-output', temp_filename,
-                '-severity', 'critical,high,medium,low,info',
-                '-timeout', str(self.REQUEST_TIMEOUT),
-                '-retries', '2',
-                '-rate-limit', str(self.RATE_LIMIT),
-                '-bulk-size', str(self.BULK_SIZE),
-                '-concurrency', '25',
-                '-no-color',
-                '-silent',
-                '-stats',
-                # Scan specific template categories
-                '-tags', ','.join(self.TEMPLATE_TAGS),
-                # Enable automatic template updates check
-                '-update-templates',
-            ]
-            
+            'nuclei',
+            '-target', target_url,
+            '-jsonl',  # Use -jsonl instead of -json for v3.x
+            '-o', temp_filename,  # Use -o instead of -output
+            '-severity', 'critical,high,medium,low,info',
+            '-timeout', str(self.REQUEST_TIMEOUT),
+            '-retries', '2',
+            '-rl', str(self.RATE_LIMIT),  # Use -rl instead of -rate-limit
+            '-bs', str(self.BULK_SIZE),  # Use -bs instead of -bulk-size
+            '-c', '25',  # Use -c instead of -concurrency
+            '-nc',  # Use -nc instead of -no-color
+            '-silent',
+            '-stats',
+            '-tags', ','.join(self.TEMPLATE_TAGS),
+            '-ut',  # Use -ut instead of -update-templates (or remove this line)
+        ]
+
             # Add specific template paths if available
             template_paths = options.get('template_paths', [])
             for path in template_paths:
@@ -93,6 +91,7 @@ class NucleiScanner(BaseScanner):
                 stdout=asyncio.subprocess.PIPE,
                 stderr=asyncio.subprocess.PIPE
             )
+            logger.info(f"Running Nuclei command: {' '.join(cmd)}")
             
             try:
                 stdout, stderr = await asyncio.wait_for(
@@ -101,6 +100,7 @@ class NucleiScanner(BaseScanner):
                 )
                 
                 # Log any stderr output for debugging
+                
                 if stderr:
                     stderr_text = stderr.decode('utf-8', errors='ignore')
                     if stderr_text.strip():
