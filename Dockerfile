@@ -28,8 +28,8 @@ RUN apt-get update && apt-get install -y \
 RUN wget -q https://github.com/projectdiscovery/nuclei/releases/download/v3.3.5/nuclei_3.3.5_linux_amd64.zip \
     && unzip nuclei_3.3.5_linux_amd64.zip \
     && mv nuclei /usr/local/bin/ \
-    && rm nuclei_3.3.5_linux_amd64.zip 
-    # && nuclei -update-templates
+    && rm nuclei_3.3.5_linux_amd64.zip \
+    && nuclei -update-templates
 
 # Install Nikto
 RUN git clone https://github.com/sullo/nikto.git /opt/nikto \
@@ -57,5 +57,4 @@ HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
     CMD curl -f http://localhost:8000/api/health || exit 1
 
 # Run the application
-# CMD ["python", "main.py"]
-CMD nuclei -update-templates -silent && python main.py
+CMD ["python", "main.py"]

@@ -22,26 +22,20 @@ class NucleiScanner(BaseScanner):
     REQUEST_TIMEOUT = 10  # seconds
     
     # Rate limit (requests per second)
-    RATE_LIMIT = 150  # default in nuclei v3
+    RATE_LIMIT = 50  # default in nuclei v3
     
     # Bulk size for concurrent requests
-    BULK_SIZE = 25  # default in nuclei v3
+    BULK_SIZE = 10  # default in nuclei v3
     
     # Concurrency (templates executed in parallel)
-    CONCURRENCY = 25  # default in nuclei v3
+    CONCURRENCY = 10  # default in nuclei v3
     
     # Template tags to scan (common vulnerability categories)
     TEMPLATE_TAGS = [
-        'cve',           # Known CVEs
-        'panel',         # Admin panels
-        'exposure',      # Information exposure
-        'misconfig',     # Misconfigurations
+        'cve',           # Known vulnerabilities
+        'exposure',      # Information disclosure
+        'misconfig',     # Security misconfigurations
         'default-login', # Default credentials
-        'takeover',      # Subdomain takeover
-        'tech',          # Technology detection
-        'token',         # API tokens/keys exposure
-        'config',        # Configuration files
-        'backup',        # Backup files
     ]
     
     async def scan(self, target_url: str, options: Dict = None) -> Dict:
