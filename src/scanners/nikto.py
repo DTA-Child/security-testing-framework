@@ -16,7 +16,7 @@ class NiktoScanner(BaseScanner):
     """Enhanced Nikto web server vulnerability scanner"""
     
     # Scan timeout in seconds (increased from 60 to 600 - 10 minutes)
-    SCAN_TIMEOUT = 2000  # 10 minutes for comprehensive scan
+    SCAN_TIMEOUT = 600  # 10 minutes for comprehensive scan
     
     # Request timeout
     REQUEST_TIMEOUT = 15

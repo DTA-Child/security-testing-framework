@@ -16,7 +16,7 @@ class NucleiScanner(BaseScanner):
     """Fixed Nuclei template-based vulnerability scanner for v3.x"""
     
     # Scan timeout in seconds
-    SCAN_TIMEOUT = 1000  # 5 minutes
+    SCAN_TIMEOUT = 300  # 5 minutes
     
     # Request timeout per request
     REQUEST_TIMEOUT = 10  # seconds
